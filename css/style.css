@@ -1,0 +1,82 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.theme-color {
+  background-color: #20D3C2;
+}
+
+.theme-layout-margin {
+  margin-left: 16.6666666667%;
+  margin-right: 16.6666666667%;
+}
+
+.top-menu {
+  justify-content: space-between;
+  align-content: center;
+  height: 40px;
+}
+.top-menu div {
+  display: flex;
+  align-self: center;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+.top-menu div a, .top-menu div div {
+  margin: 4px;
+  color: white !important;
+  cursor: pointer;
+  font-size: 16px;
+}
+.top-menu div .dropdown::after {
+  content: "\f107";
+  font: normal normal normal 14px/1 FontAwesome;
+  align-self: center;
+  margin-left: 4px;
+  margin-bottom: 2px;
+  font-size: 22px;
+}
+
+.margin-right {
+  margin-right: 6px;
+}
+
+.margin {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.fa {
+  align-self: center;
+}
+
+.horizontal {
+  display: flex;
+}
+
+.searchbar {
+  outline: none;
+  color: #AAAAAA;
+  caret-color: black;
+  box-shadow: none;
+  border-radius: 23px;
+  border-width: 1px;
+  border-color: #E3E3E3;
+  font-size: 14px;
+  height: 46px;
+  padding-left: 25px;
+}
+
+.searchbutton {
+  background-color: #20d3c2;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 0 23px 23px 0;
+  margin-left: -46px;
+}
+
+input:focus {
+  border-color: black;
+  color: black;
+}/*# sourceMappingURL=style.css.map */

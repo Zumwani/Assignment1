@@ -25,7 +25,8 @@ body {
   margin-left: -6px;
   margin-right: -6px;
 }
-.top-menu div a, .top-menu div div {
+.top-menu div a,
+.top-menu div div {
   margin: 0 12px;
   color: white !important;
   cursor: pointer;
@@ -33,6 +34,14 @@ body {
 }
 .top-menu div .fa {
   margin: 0 11px 0 0;
+}
+.top-menu div .dropdown {
+  padding-right: 32px;
+  margin-left: -16px;
+}
+
+.dropdown {
+  position: relative;
 }
 
 .dropdown::after {
@@ -42,6 +51,9 @@ body {
   margin-left: 4px;
   margin-bottom: 2px;
   font-size: 22px;
+  text-align: right;
+  position: absolute;
+  right: 14px;
 }
 
 .account {
@@ -156,14 +168,14 @@ a:hover {
 .square-button {
   background-color: #20D3C2;
   border: none;
-  padding: 6px 60px 6px 6px;
+  padding: 6px 66px 6px 14px;
 }
 
 .round-button {
   background-color: #20D3C2;
   border: none;
-  padding: 6px 6px 6px 6px;
-  border-radius: 22px;
+  padding: 6px 20px 6px 20px;
+  border-radius: 20px;
 }
 
 .special-offer {
@@ -173,6 +185,9 @@ a:hover {
 .sub-menu {
   border-top: 10px;
   border-color: black;
+  justify-content: space-between;
+  align-content: center;
+  height: 40px;
 }
 
 @media only screen and (max-width: 1072px) {

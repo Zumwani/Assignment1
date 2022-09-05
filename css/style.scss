@@ -14,7 +14,7 @@ body {
 }
 
 .top-menu {
-    
+
     justify-content: space-between;
     align-content: center;
     height: 40px;
@@ -26,19 +26,29 @@ body {
         margin-left: -6px;
         margin-right: -6px;
 
-        a, div {
+        a,
+        div {
             margin: 0 12px;
             color: white !important;
             cursor: pointer;
             font-size: 16px;
-         }
+        }
 
         .fa {
             margin: 0 11px 0 0;
         }
 
+        .dropdown {
+            padding-right: 32px;
+            margin-left: -16px;
+        }
+
     }
 
+}
+
+.dropdown {
+    position: relative;
 }
 
 .dropdown::after {
@@ -48,6 +58,9 @@ body {
     margin-left: 4px;
     margin-bottom: 2px;
     font-size: 22px;
+    text-align: right;
+    position: absolute;
+    right: 14px;
 }
 
 .account {
@@ -55,11 +68,11 @@ body {
 }
 
 .margin-right {
-    margin-right: 6px; 
+    margin-right: 6px;
 }
 
 .margin-right-2x {
-    margin-right: 22px !important; 
+    margin-right: 22px !important;
 }
 
 .margin {
@@ -90,7 +103,7 @@ body {
     margin-right: 65px;
 
     input {
-        outline:none;
+        outline: none;
         color: #AAAAAA;
         height: 100%;
         width: 100%;
@@ -171,14 +184,14 @@ a:hover {
 .square-button {
     background-color: #20D3C2;
     border: none;
-    padding: 6px 60px 6px 6px;
+    padding: 6px 66px 6px 14px;
 }
 
 .round-button {
     background-color: #20D3C2;
     border: none;
-    padding: 6px 6px 6px 6px;
-    border-radius: 22px;
+    padding: 6px 20px 6px 20px;
+    border-radius: 20px;
 }
 
 .special-offer {
@@ -192,7 +205,6 @@ a:hover {
     align-content: center;
     height: 40px;
 }
-}
 
 @media only screen and (max-width: 1072px) {
 
@@ -202,11 +214,11 @@ a:hover {
         transition-property: margin-left, margin-right;
         transition-duration: 1s;
     }
-    
+
 }
 
 @media only screen and (max-width: 1072px) {
-    
+
     .theme-layout-margin {
         margin-left: 22px;
         margin-right: 22px;

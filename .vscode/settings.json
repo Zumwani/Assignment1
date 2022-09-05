@@ -6,7 +6,10 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        ".vscode/": true
+        ".vscode/": true,
+        "wpf/obj/": true,
+        "wpf/bin/": true
     },
-    "hidefiles.selectedProfile": "Default"
+    "hidefiles.selectedProfile": "Default",
+    "html.format.wrapLineLength": 0
 }

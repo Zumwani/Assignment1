@@ -1,0 +1,38 @@
+
+.dropdown::after {
+    content: "\f107";
+    font: normal normal normal 14px/1 FontAwesome;
+    align-self: center;
+    margin-left: 4px;
+    margin-bottom: 2px;
+    font-size: 22px;
+    text-align: right;
+    position: absolute;
+    right: 14px;
+}
+
+a:hover {
+    color: unset;
+    background-color: unset;
+}
+
+.square-button {
+    background-color: var(--theme-color);
+    border: none;
+    padding: 6px 66px 6px 14px;
+}
+
+.square-button.round-corners {
+    border-radius: 6px;
+}
+
+.round-button {
+    background-color: var(--theme-color);
+    border: none;
+    padding: 6px 20px 6px 20px;
+    border-radius: 20px;
+}
+
+.round-button.bg-white {
+    color: var(--theme-color);
+}

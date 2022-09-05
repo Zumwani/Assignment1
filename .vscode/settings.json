@@ -8,7 +8,15 @@
         "**/.DS_Store": true,
         ".vscode/": true,
         "wpf/obj/": true,
-        "wpf/bin/": true
+        "wpf/bin/": true,
+        "css/general.css": true,
+        "css/general.css.map": true,
+        "css/style.css": true,
+        "css/style.css.map": true,
+        "css/buttons.css": true,
+        "css/buttons.css.map": true,
+        "css/index.css": true,
+        "css/index.css.map": true
     },
     "hidefiles.selectedProfile": "Default",
     "html.format.wrapLineLength": 0

@@ -199,11 +199,14 @@ a:hover {
 }
 
 .sub-menu {
-    border-top: 10px;
-    border-color: black;
     justify-content: space-between;
     align-content: center;
     height: 40px;
+}
+
+.line {
+    height: 1px;
+    background-color: #e3e3e3;
 }
 
 @media only screen and (max-width: 1072px) {

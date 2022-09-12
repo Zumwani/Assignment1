@@ -6,20 +6,18 @@
     align-content: center;
     height: 40px;
 
+    a,
+    div {
+        margin: 0 12px;
+        font-size: 16px;
+    }
+
     div {
 
         display: flex;
         align-self: center;
         margin-left: -6px;
         margin-right: -6px;
-
-        a,
-        div {
-            margin: 0 12px;
-            color: white !important;
-            cursor: pointer;
-            font-size: 16px;
-        }
 
         .fa {
             margin: 0 11px 0 0;
@@ -36,6 +34,9 @@
 
 .account {
     white-space: nowrap;
+    span {
+        margin-left: 6px;
+    }
 }
 
 .fa {
@@ -76,7 +77,6 @@
     }
 
     button {
-        background-color: #20d3c2;
         width: 46px;
         height: 46px;
         border: none;
@@ -84,6 +84,7 @@
         position: absolute;
         right: 0px;
         display: inline;
+        text-align: center;
     }
 
 }
@@ -100,32 +101,13 @@ input:focus {
     content: "€0.00";
 }
 
-a {
-    align-self: center;
-    margin-left: 12px;
-    margin-right: 12px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-
-    span {
-        font-size: 16px;
-        font-family: 'Roboto', sans-serif;
-    }
-
-}
-
 .logo {
     align-self: center;
     min-width: 160px;
     max-width: 160px;
     min-height: 23px;
     max-height: 23px;
-}
-
-.no-clue-what-icon-this-is img {
-    width: 26px;
-    height: 22px;
+    cursor: pointer;
 }
 
 .special-offer {
@@ -175,20 +157,27 @@ a {
     justify-content: space-around;
     padding-left: 120px;
     padding-right: 120px;
+    margin: 120px 0;
 }
 
 .info-box {
     width: 400px;
-    margin: 120px 15px;
+    margin: 0 15px;
     padding: 26px;
     background: #edfcfa;
     color: black;
     text-align: left;
+    white-space: normal;
+    transition: all 0.1s ease-in-out;
 
     div :nth-child(1) {
         margin-right: 30px;
     }
-    
+
+    &:hover {
+        transition: all 0.1s ease-in-out;
+    }
+
 }
 
 two-column-grid > div {
@@ -211,34 +200,6 @@ two-column-grid > div {
 .category-button:nth-child(6) { grid-column-start: 3; grid-column-end: 5; grid-row-start: 3; grid-row-end: 3; }
 .category-button:nth-child(7) { grid-column-start: 5; grid-column-end: 5; grid-row-start: 3; grid-row-end: 3; }
 
-.category-button:nth-child(1)::after { content: 'Men'; }
-.category-button:nth-child(2)::after { content: 'Women'; }
-.category-button:nth-child(3)::after { content: 'Kids'; }
-
-.category-button:nth-child(4)::after { content: 'Shoes'; }
-.category-button:nth-child(5)::after { content: 'Hats'; }
-.category-button:nth-child(6)::after { content: 'Sunglasses'; }
-.category-button:nth-child(7)::after { content: 'Watches'; }
-
-.category-button {
-    background-color: #cccccc;
-    margin: 6px;
-    border-radius: 6px;
-    position: relative;
-}
-
-.category-button::after {
-    background-color: #292f51;
-    color: var(--theme-color);
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 50%;
-    border-radius: 0 6px 0 6px;
-    padding: 6px 13px;
-    text-align:left;
-}
-
 @media only screen and (max-width: 1072px) {
 
     .theme-layout-margin {
@@ -248,20 +209,13 @@ two-column-grid > div {
         transition-duration: 1s;
     }
 
-}
-
-@media only screen and (max-width: 1072px) {
-
-    .theme-layout-margin {
-        margin-left: 22px;
-        margin-right: 22px;
-        transition-property: margin-left, margin-right;
-        transition-duration: 1s;
+    .logo {
+        margin: auto;
     }
 
     .searchbar {
-        margin-left: 22px;
-        margin-right: 22px;
+        margin: auto;
+        margin: 22px;
     }
 
     .header {

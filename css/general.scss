@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    width: 100%;
 }
 
 h1 {
@@ -110,11 +111,7 @@ grid {
     display: block;
     opacity: 0;
     transition: all 0.1s ease-in-out;
-
-    &::after {
-        content: "fasf";
-    }
-
+    
 }
 
 *[data-tooltip]:hover::after {

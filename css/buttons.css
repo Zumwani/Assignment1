@@ -113,9 +113,16 @@ button.white:hover {
   opacity: 1;
 }
 
+.center {
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
 button.product {
   position: relative;
   background-size: cover;
+  background-position: center;
   width: 350px;
   height: 400px;
   background-color: #eeeeee;

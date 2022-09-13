@@ -143,7 +143,6 @@ input:focus {
 
     h1 {
         font-size: 64px;
-        margin-top: 120px;
     }
 
     button {
@@ -151,6 +150,10 @@ input:focus {
         font-family: 'roboto', 'sans-serif';
     }
 
+}
+
+.section-header-margin {
+    margin-top: 120px;
 }
 
 .info-container {

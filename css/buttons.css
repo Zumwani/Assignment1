@@ -61,12 +61,35 @@ button.white:hover {
 }
 
 .round-button {
-  padding: 6px 20px 6px 20px;
+  padding: 6px 22px 6px 22px;
   border-radius: 20px;
+  height: 54px;
 }
-
 .round-button.bg-white {
   color: var(--theme-color);
+}
+.round-button.bg-black {
+  color: white;
+  background-color: black;
+  transition: background-color 0.1s;
+}
+.round-button:hover {
+  background-color: gray !important;
+  transition: background-color 0.1s;
+}
+
+.section-text {
+  width: 445px;
+}
+
+.align-end {
+  align-self: flex-end;
+  right: 0px;
+}
+
+.align-start {
+  align-self: flex-start;
+  left: 0px;
 }
 
 .category-button {
@@ -128,15 +151,6 @@ button.product {
   background-color: #eeeeee;
   border-radius: 4px;
   margin-right: 30px;
-}
-button.product:nth-of-type(1) {
-  background-image: url("../img/model1.svg");
-}
-button.product:nth-of-type(2) {
-  background-image: url("../img/model2.svg");
-}
-button.product:nth-of-type(3) {
-  background-image: url("../img/model3.svg");
 }
 button.product .container {
   position: absolute;

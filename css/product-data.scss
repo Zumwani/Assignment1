@@ -1,0 +1,43 @@
+.product-1 {
+    background-image: url("../img/model1.svg");
+    .header::after { content: 'Blue silk flare sleeved top'; }
+    .category::after { content: 'Fashion'; }
+    .price.original::after { content: '€50.00'; }
+    .price::after { content: '€20.00'; }
+}
+.product-2 {
+    background-image: url("../img/model2.svg");
+    .header::after { content: 'New look men\'s coat'; }
+    .category::after { content: 'Fashion'; }
+    .price.original::after { content: '€50.00'; }
+    .price::after { content: '€20.00'; }
+}
+.product-3 {
+    background-image: url("../img/model3.svg");
+    .header::after { content: 'Circle pattern girls shirt'; }
+    .category::after { content: 'Fashion'; }
+    .price.original::after { content: '€50.00'; }
+    .price::after { content: '€20.00'; }
+}
+
+.product-4 {
+    background-image: url("../img/model4.svg");
+    .header::after { content: 'Winter collection for women\'s'; }
+    .category::after { content: 'Fashion'; }
+    .price.original::after { content: '€50.00'; }
+    .price::after { content: '€20.00'; }
+}
+.product-5 {
+    background-image: url("../img/model5.svg");
+    .header::after { content: 'New look men\'s coat'; }
+    .category::after { content: 'Fashion'; }
+    .price.original::after { content: '€50.00'; }
+    .price::after { content: '€20.00'; }
+}
+.product-6 {
+    background-image: url("../img/model6.svg");
+    .header::after { content: 'Red women\'s blazer full'; }
+    .category::after { content: 'Fashion'; }
+    .price.original::after { content: '€50.00'; }
+    .price::after { content: '€20.00'; }
+}

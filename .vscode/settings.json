@@ -16,7 +16,9 @@
         "css/buttons.css": true,
         "css/buttons.css.map": true,
         "css/index.css": true,
-        "css/index.css.map": true
+        "css/index.css.map": true,
+        "css/product-data.css": true,
+        "css/product-data.css.map": true
     },
     "hidefiles.selectedProfile": "Default",
     "html.format.wrapLineLength": 0

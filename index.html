@@ -9,13 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/product-data.css" rel="stylesheet">
     <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
 </head>
 <body>
 
+    <!--TODO: Remove animation on load-->
+    <!--TODO: Add dummy dropdowns for .dropdown buttons-->
+    <!--TODO: Fix weird animation for popup on button.product-->
+    <!--TODO: Add more comments-->
+    <!--TODO: Fix special offer-->
+    <!--TODO: Fix alignment on .section-text-->
+    <!--TODO: Fix border-radius on product overlay-->
+    <!--TODO: Add rating to product overlay-->
+
     <header>
 
-        <!--Top menu-->
+        <!--Top: language / social links-->
         <div class="theme-background">
             
             <div class="horizontal top-menu theme-layout-margin">
@@ -37,8 +47,8 @@
                 
             </div>
         </div>
-
-        <!--Header-->
+    
+        <!--Middle: Logo / search bar / user pages links -->
         <div class="horizontal theme-layout-margin margin header">
             
             <!--Logo-->
@@ -65,17 +75,17 @@
             <a href="" class="fa-regular fa-shuffle"></a>
             
             <a href="" class="fa fa-shopping-bag cart"></a>
-
+    
         </div>
-
+    
         <div class="line"></div>
         
-        <!--sub menu-->
+        <!--Bottom: browse categories / special offer-->
         <div class="horizontal theme-layout-margin sub-menu">
             <button class="square-button dropdown">☰ Browse categories</button>
             <button class="round-button special-offer">Special offer</button>
         </div>
-
+    
     </header>
         
     <div class="section large gray">
@@ -88,9 +98,9 @@
                 <button class="round-button white">Shop Now</button>
             </div>
             <div>
-                <img class="column1" src="img/model0.svg"><img>
+                <img src="img/model0.svg"><img>
             </div>
-        </grid>
+        </two-column-grid>
 
     </div>
     
@@ -105,7 +115,7 @@
                     <h5 class="theme-color">Free shipping</h5>
                     <p>For a local customer, we provide free shipping facility</p>
                 </div>
-            </grid>
+            </two-column-grid>
         </button>
 
         <button class="square-button round-corners info-box">
@@ -117,7 +127,7 @@
                     <h5 class="theme-color">24/7 support</h5>
                     <p>For any inquiry, we are available 24 hours every day</p>
                 </div>
-            </grid>
+            </two-column-grid>
         </button>
 
         <button class="square-button round-corners info-box">
@@ -129,7 +139,7 @@
                     <h5 class="theme-color">Online payment</h5>
                     <p>You can pay quickly and easily with our online payment system</p>
                 </div>
-            </grid>
+            </two-column-grid>
         </button>
 
         <button class="square-button round-corners info-box">
@@ -141,7 +151,7 @@
                     <h5 class="theme-color">Fast delivery</h5>
                     <p>We understand your urgency and we deliver in a fast way</p>
                 </div>
-            </grid>
+            </two-column-grid>
         </button>
 
     </div>
@@ -168,14 +178,16 @@
         <div class="squigly-line"></div>
         <p>Check out our latest products from top fashion designers</p>
 
+        <!--The following products have their info set from product-data.css (product1, product2... etc)-->
+        <!--Not the best solution, but looks the cleanest for now-->
         <div class="horizontal center">
-            <button class="product">
+            <button class="product product-1">
                 <div class="container">
                     <div class="bottom">
-                        <p class="header">Blue silk flare sleeved top</p>
-                        <p class="category">Fashion</p>
-                        <p class="price original">€50.00</p>
-                        <p class="price theme-color">€20.00</p>
+                        <p class="header"></p>
+                        <p class="category"></p>
+                        <p class="price original"></p>
+                        <p class="price theme-color"></p>
                     </div>
                     <div class="popup vertical">
                         <a class="fa-solid fa-circle" href="" data-tooltip="This button does something"></a>
@@ -186,13 +198,13 @@
                     </div>
                 </div>
             </button>
-            <button class="product">
+            <button class="product product-2">
                 <div class="container">
                     <div class="bottom">
-                        <p class="header">New look men's coat</p>
-                        <p class="category">Fashion</p>
-                        <p class="price original">€50.00</p>
-                        <p class="price theme-color">€20.00</p>
+                        <p class="header"></p>
+                        <p class="category"></p>
+                        <p class="price original"></p>
+                        <p class="price theme-color"></p>
                     </div>
                     <div class="popup vertical">
                         <a class="fa-solid fa-circle" href="" data-tooltip="This button does something"></a>
@@ -203,13 +215,13 @@
                     </div>
                 </div>
             </button>
-            <button class="product">
+            <button class="product product-3">
                 <div class="container">
                     <div class="bottom">
-                        <p class="header">Circle pattern girls shirt</p>
-                        <p class="category">Fashion</p>
-                        <p class="price original">€50.00</p>
-                        <p class="price theme-color">€20.00</p>
+                        <p class="header"></p>
+                        <p class="category"></p>
+                        <p class="price original"></p>
+                        <p class="price theme-color"></p>
                     </div>
                     <div class="popup vertical">
                         <a class="fa-solid fa-circle" href="" data-tooltip="This button does something"></a>
@@ -224,7 +236,133 @@
 
     </div>
 
+    <div class="section large gray section-header-margin flex">
+        
+        <two-column-grid class="theme-layout-margin">
+            <div class="stretch-height section-side flex">
+                <div class="banner theme-background flex">
+                    <div class="center stretch-width flex-column">
+                        <h1 class="white-color font-size-60"><b>30%<i class="font-size-36"> OFF</i></b></h1>
+                        <p class="white-color">FOR NEW CUSTOMER</p>
+                        <button class="round-button bg-black">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="section-text align-end">
+                    <p>Donec pulvinar arcu vitae ipsum varius cursus. Nunc iaculis fermentum iaculis. Nunc pulvinar purus at erat lacinia, ut convallis nibh consequat. Integer nulla nisi, aliquam at tellus a, viverra scelerisque purus. Nam pretium iaculis ultrices.</p>
+                    <button class="round-button bg-white">LEARN MORE</button>
+                </div>
+            </div>
+        </two-column-grid>
 
+    </div>
+
+    <div class="horizontal-align section section-header-margin">
+
+        <h1 class="margin"><b>FEATURED <span class="theme-color"> PRODUCTS</span></b></h1>
+        <div class="squigly-line"></div>
+        <p class="margin">Check out our monthly featured products from top brands</p>
+
+        <div class="horizontal center">
+            <button class="product product-4">
+                <div class="container">
+                    <div class="bottom">
+                        <p class="header"></p>
+                        <p class="category"></p>
+                        <p class="price original"></p>
+                        <p class="price theme-color"></p>
+                    </div>
+                    <div class="popup vertical">
+                        <a class="fa-solid fa-circle" href="" data-tooltip="This button does something"></a>
+                        <a class="fa-regular fa-heart" href="" data-tooltip="Add this product to your favorites"></a>
+                        <a class="fa-regular fa-shuffle" href="" data-tooltip="Shuffle?"></a>
+                        <a class="fa fa-search" href="" data-tooltip="Search for similar products"></a>
+                        <a class="fa fa-shopping-bag" href="" data-tooltip="Add to cart"></a>
+                    </div>
+                </div>
+            </button>
+            <button class="product product-5">
+                <div class="container">
+                    <div class="bottom">
+                        <p class="header"></p>
+                        <p class="category"></p>
+                        <p class="price original"></p>
+                        <p class="price theme-color"></p>
+                    </div>
+                    <div class="popup vertical">
+                        <a class="fa-solid fa-circle" href="" data-tooltip="This button does something"></a>
+                        <a class="fa-regular fa-heart" href="" data-tooltip="Add this product to your favorites"></a>
+                        <a class="fa-regular fa-shuffle" href="" data-tooltip="Shuffle?"></a>
+                        <a class="fa fa-search" href="" data-tooltip="Search for similar products"></a>
+                        <a class="fa fa-shopping-bag" href="" data-tooltip="Add to cart"></a>
+                    </div>
+                </div>
+            </button>
+            <button class="product product-6">
+                <div class="container">
+                    <div class="bottom">
+                        <p class="header"></p>
+                        <p class="category"></p>
+                        <p class="price original"></p>
+                        <p class="price theme-color"></p>
+                    </div>
+                    <div class="popup vertical">
+                        <a class="fa-solid fa-circle" href="" data-tooltip="This button does something"></a>
+                        <a class="fa-regular fa-heart" href="" data-tooltip="Add this product to your favorites"></a>
+                        <a class="fa-regular fa-shuffle" href="" data-tooltip="Shuffle?"></a>
+                        <a class="fa fa-search" href="" data-tooltip="Search for similar products"></a>
+                        <a class="fa fa-shopping-bag" href="" data-tooltip="Add to cart"></a>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+    </div>
+    
+    <div class="section alt-section-background gray section-header-margin flex">
+        
+        <two-column-grid class="theme-layout-margin flex align-start">
+            <div class="section-side">
+                <div class="banner theme-background flex">
+                    <div class="center stretch-width flex-column">
+                        <h1 class="white-color font-size-60 line-height-min"><b>FLASH SALE</i></b></h1>
+                        <p class="white-color">UP TO 50% OFF</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-column">
+                <div class="section-text align-end flex justify-content">
+                    <div class="time-circle">
+                        <div>
+                            <h2 class="theme-color">7</h2>
+                            <p>Days</p>
+                        </div>
+                    </div>
+                    <div class="time-circle">
+                        <div>
+                            <h2 class="theme-color">23</h2>
+                            <p>Hours</p>
+                        </div>
+                    </div>
+                    <div class="time-circle">
+                        <div>
+                            <h2 class="theme-color">46</h2>
+                            <p>Minutes</p>
+                        </div>
+                    </div>
+                    <div class="time-circle">
+                        <div>
+                            <h2 class="theme-color">12</h2>
+                            <p>Seconds</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="round-button align-center">SHOP NOW</button>       
+            </div>
+        </two-column-grid>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <!---<script src="script.js"></script>-->

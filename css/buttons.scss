@@ -74,8 +74,9 @@ button {
 
 .round-button {
     padding: 6px 22px 6px 22px;
-    border-radius: 20px;
+    border-radius: 40px;
     height: 54px;
+    width: fit-content;
 
     &.bg-white {
         color: var(--theme-color);
@@ -93,20 +94,6 @@ button {
         transition: background-color 0.1s;
     }
 
-}
-
-.section-text {
-    width: 445px;
-}
-
-.align-end {
-    align-self: flex-end;
-    right: 0px;
-}
-
-.align-start {
-    align-self: flex-start;
-    left: 0px;
 }
 
 .category-button {
@@ -177,7 +164,6 @@ button.product {
     height: 400px;
     background-color: #eeeeee;
     border-radius: 4px;
-    margin-right: 30px;
 
     .container {
         position: absolute;

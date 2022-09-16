@@ -41,3 +41,26 @@
     .price.original::after { content: '€50.00'; }
     .price::after { content: '€20.00'; }
 }
+
+
+.product-7 {
+    background-image: url("../img/model7.svg");
+    .header::after { content: 'Men\'s denim shirts full'; }
+    .category::after { content: 'Fashion'; }
+    .price.original::after { content: '€50.00'; }
+    .price::after { content: '€20.00'; }
+}
+.product-8 {
+    background-image: url("../img/model8.svg");
+    .header::after { content: 'Women\'s leather bag and shoes'; }
+    .category::after { content: 'Fashion'; }
+    .price.original::after { content: '€50.00'; }
+    .price::after { content: '€20.00'; }
+}
+.product-9 {
+    background-image: url("../img/model9.svg");
+    .header::after { content: 'New look men\'s sneakers'; }
+    .category::after { content: 'Fashion'; }
+    .price.original::after { content: '€50.00'; }
+    .price::after { content: '€20.00'; }
+}

@@ -22,7 +22,10 @@
     <!--TODO: Fix alignment on .section-text-->
     <!--TODO: Fix border-radius on product overlay-->
     <!--TODO: Add rating to product overlay-->
-
+    <!--TODO: Check heights of sections-->
+    <!--TODO: Fix textbox border-->
+    
+    <!--Header-->
     <header>
 
         <!--Top: language / social links-->
@@ -88,6 +91,7 @@
     
     </header>
         
+    <!--Shopping is more fun-->
     <div class="section large gray">
         
         <two-column-grid class="theme-layout-margin">
@@ -104,6 +108,7 @@
 
     </div>
     
+    <!--Info boxes-->
     <div class="horizontal info-container">
         
         <button class="square-button round-corners info-box">
@@ -156,12 +161,11 @@
 
     </div>
 
+    <!--Shop by category-->
     <div class="horizontal-align section">
 
         <h1 class="margin"><b>SHOP BY <span class="theme-color">CATEGORY</span></b></h1>
-
         <div class="squigly-line"></div>
-        
         <p class="margin">We always try to give you the best product within a fast and reliable way</p>
 
         <grid class="category-grid theme-layout-margin">
@@ -174,13 +178,16 @@
             <div class="category-button"><div><p>Watches</p><p>50 products</p></div></div>
         </grid>
 
+    </div>
+
+    <!--New arrivals-->
+    <div class="section horizontal-align flex-column">
+
         <h1 class="section-header-margin"><b>NEW</b><span class="theme-color margin"> ARRIVALS</span></h1>
         <div class="squigly-line"></div>
         <p>Check out our latest products from top fashion designers</p>
-
-        <!--The following products have their info set from product-data.css (product1, product2... etc)-->
-        <!--Not the best solution, but looks the cleanest for now-->
-        <div class="horizontal center">
+    
+        <three-column-grid class="align-center">
             <button class="product product-1">
                 <div class="container">
                     <div class="bottom">
@@ -232,13 +239,14 @@
                     </div>
                 </div>
             </button>
-        </div>
-
+        </three-column-grid>
+      
     </div>
 
-    <div class="section large gray section-header-margin flex">
+    <!--30% off-->
+    <div class="section large dark-gray section-header-margin flex">
         
-        <two-column-grid class="theme-layout-margin">
+        <three-column-grid class="theme-layout-margin">
             <div class="stretch-height section-side flex">
                 <div class="banner theme-background flex">
                     <div class="center stretch-width flex-column">
@@ -248,23 +256,25 @@
                     </div>
                 </div>
             </div>
+            <div></div>
             <div class="flex">
-                <div class="section-text align-end">
+                <div class="section-text align-center">
                     <p>Donec pulvinar arcu vitae ipsum varius cursus. Nunc iaculis fermentum iaculis. Nunc pulvinar purus at erat lacinia, ut convallis nibh consequat. Integer nulla nisi, aliquam at tellus a, viverra scelerisque purus. Nam pretium iaculis ultrices.</p>
                     <button class="round-button bg-white">LEARN MORE</button>
                 </div>
             </div>
-        </two-column-grid>
+        </three-column-grid>
 
     </div>
 
-    <div class="horizontal-align section section-header-margin">
+    <!--Featured products-->
+    <div class="horizontal-align section section-header-margin flex-column">
 
         <h1 class="margin"><b>FEATURED <span class="theme-color"> PRODUCTS</span></b></h1>
         <div class="squigly-line"></div>
         <p class="margin">Check out our monthly featured products from top brands</p>
 
-        <div class="horizontal center">
+        <three-column-grid class="align-center">
             <button class="product product-4">
                 <div class="container">
                     <div class="bottom">
@@ -316,14 +326,15 @@
                     </div>
                 </div>
             </button>
-        </div>
+        </three-column-grid>
 
     </div>
     
+    <!--Flash sale-->
     <div class="section alt-section-background gray section-header-margin flex">
-        
-        <two-column-grid class="theme-layout-margin flex align-start">
-            <div class="section-side">
+        <three-column-grid class="theme-layout-margin section">
+
+            <div class="section-side stretch-height align-start">
                 <div class="banner theme-background flex">
                     <div class="center stretch-width flex-column">
                         <h1 class="white-color font-size-60 line-height-min"><b>FLASH SALE</i></b></h1>
@@ -331,8 +342,9 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-column">
-                <div class="section-text align-end flex justify-content">
+            <div></div>
+            <div class="flex-column align-center">
+                <div class="time-container">
                     <div class="time-circle">
                         <div>
                             <h2 class="theme-color">7</h2>
@@ -358,11 +370,107 @@
                         </div>
                     </div>
                 </div>
-                <button class="round-button align-center">SHOP NOW</button>       
+                <button class="round-button bg-white align-center">SHOP NOW</button>       
+            </div>
+
+        </three-column-grid>
+    </div>
+
+    <!--Top sellers-->
+    <div class="section horizontal-align section-header-margin flex-column">
+        
+        <h1 class="margin"><b>TOP <span class="theme-color"> SELLERS</span></b></h1>
+        <div class="squigly-line"></div>
+        <p class="margin">Check out our weekly top sellers in all categories</p>
+
+        <grid class="width-fit-content align-center final-grid">
+
+            <button class="product product-7">
+                <div class="container">
+                    <div class="bottom">
+                        <p class="header"></p>
+                        <p class="category"></p>
+                        <p class="price original"></p>
+                        <p class="price theme-color"></p>
+                    </div>
+                    <div class="popup vertical">
+                        <a class="fa-solid fa-circle" href="" data-tooltip="This button does something"></a>
+                        <a class="fa-regular fa-heart" href="" data-tooltip="Add this product to your favorites"></a>
+                        <a class="fa-regular fa-shuffle" href="" data-tooltip="Shuffle?"></a>
+                        <a class="fa fa-search" href="" data-tooltip="Search for similar products"></a>
+                        <a class="fa fa-shopping-bag" href="" data-tooltip="Add to cart"></a>
+                    </div>
+                </div>
+            </button>
+
+            <button class="product product-8">
+                <div class="container">
+                    <div class="bottom">
+                        <p class="header"></p>
+                        <p class="category"></p>
+                        <p class="price original"></p>
+                        <p class="price theme-color"></p>
+                    </div>
+                    <div class="popup vertical">
+                        <a class="fa-solid fa-circle" href="" data-tooltip="This button does something"></a>
+                        <a class="fa-regular fa-heart" href="" data-tooltip="Add this product to your favorites"></a>
+                        <a class="fa-regular fa-shuffle" href="" data-tooltip="Shuffle?"></a>
+                        <a class="fa fa-search" href="" data-tooltip="Search for similar products"></a>
+                        <a class="fa fa-shopping-bag" href="" data-tooltip="Add to cart"></a>
+                    </div>
+                </div>
+            </button>
+
+            <button class="product product-9">
+                <div class="container">
+                    <div class="bottom">
+                        <p class="header"></p>
+                        <p class="category"></p>
+                        <p class="price original"></p>
+                        <p class="price theme-color"></p>
+                    </div>
+                    <div class="popup vertical">
+                        <a class="fa-solid fa-circle" href="" data-tooltip="This button does something"></a>
+                        <a class="fa-regular fa-heart" href="" data-tooltip="Add this product to your favorites"></a>
+                        <a class="fa-regular fa-shuffle" href="" data-tooltip="Shuffle?"></a>
+                        <a class="fa fa-search" href="" data-tooltip="Search for similar products"></a>
+                        <a class="fa fa-shopping-bag" href="" data-tooltip="Add to cart"></a>
+                    </div>
+                </div>
+            </button>
+
+        </grid>
+
+    </div>
+
+    <!--Subscribe now-->
+    <div class="section large gray section-header-margin flex subscribe">
+        
+        <two-column-grid class="theme-layout-margin stretch-width">
+            <div class="stretch-height flex center">
+                
+                <div>
+                    <h1 class="black-color font-size-36"><b>SUBSCRIBE <span class="theme-color">NOW</span></b></h1>
+                    <p>Sign up for awesome news about our new products and know our special discounts on products.</p>
+                    
+                    <div class="subscribe-textbox">
+                        <input placeholder="Enter email address"></input>
+                        <button class="round-button">Subscribe</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="dark-gray stretch-width">
+                
             </div>
         </two-column-grid>
 
     </div>
+
+    <footer class="flex dark-blue">
+        <p class="theme-layout-margin margin white-color">© Copyright 2022 Kenkata</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <!---<script src="script.js"></script>-->

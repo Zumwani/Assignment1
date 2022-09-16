@@ -35,6 +35,19 @@
   align-self: center;
 }
 
+input {
+  outline: none;
+  color: #AAAAAA;
+  background-color: white;
+  caret-color: black;
+  box-shadow: none;
+  border-radius: 23px;
+  border-width: 1px;
+  border-color: var(--light-gray);
+  font-size: 14px;
+  padding-left: 25px;
+}
+
 .searchbar {
   flex-grow: 1;
   height: 46px;
@@ -52,14 +65,6 @@
   color: #AAAAAA;
   height: 100%;
   width: 100%;
-  background-color: white;
-  caret-color: black;
-  box-shadow: none;
-  border-radius: 23px;
-  border-width: 1px;
-  border-color: var(--light-gray);
-  font-size: 14px;
-  padding-left: 25px;
 }
 .searchbar button {
   width: 46px;
@@ -113,19 +118,23 @@ input:focus {
   margin-bottom: 6px;
 }
 
-.align-center {
-  align-content: center;
+.time-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  margin-bottom: 27px;
+  padding-left: 0;
 }
 
-.justify-content {
-  justify-content: space-around;
+.time-container > .round-button {
+  margin-left: -100px;
 }
 
 .time-circle {
   position: relative;
   border-style: dashed;
   border-color: var(--theme-color);
-  border-width: 1px;
+  border-width: 2px;
   border-radius: 100%;
   width: 109px;
   height: 109px;
@@ -147,6 +156,82 @@ input:focus {
 }
 .time-circle p {
   font-size: 16px;
+}
+
+.width-fit-content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.final-grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "a b" "a c";
+  gap: 30px;
+}
+.final-grid .product {
+  height: 200px;
+}
+.final-grid .product:nth-child(1) {
+  height: 100%;
+}
+
+.product-7 {
+  grid-area: a;
+}
+
+.product-8 {
+  grid-area: b;
+}
+
+.product-9 {
+  grid-area: c;
+}
+
+.section-text {
+  width: 445px;
+  font-size: 14px;
+  color: white;
+}
+
+.section-text2 {
+  width: 445px;
+  font-size: 14px;
+  color: white;
+}
+
+.black-color {
+  color: black;
+}
+
+.subscribe p {
+  width: 400px;
+}
+.subscribe .dark-gray {
+  width: 100%;
+  height: 100%;
+}
+.subscribe input {
+  width: 100%;
+  height: 100%;
+}
+.subscribe button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  height: unset;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.subscribe-textbox {
+  position: relative;
+  height: 46px;
+  width: 445px;
 }
 
 .section {
@@ -190,14 +275,16 @@ input:focus {
 
 .stretch-width {
   width: 100%;
+  left: 0px;
+  right: 0px;
 }
 
 .font-size-60 {
-  font-size: 60px;
+  font-size: 60px !important;
 }
 
 .font-size-36 {
-  font-size: 36px;
+  font-size: 36px !important;
 }
 
 .flex {
@@ -215,11 +302,11 @@ input:focus {
 }
 
 .position-relative {
-  position: relative;
+  position: relative !important;
 }
 
 .position-absolute {
-  position: absolute;
+  position: absolute !important;
 }
 
 .white-color {
@@ -263,6 +350,7 @@ two-column-grid > div {
   grid-template-columns: repeat(5, minmax(100px, 1fr));
   grid-template-rows: repeat(3, minmax(100px, 1fr));
   height: 662px;
+  gap: 10px;
 }
 
 .category-button:nth-child(1) {

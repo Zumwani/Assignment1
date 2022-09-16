@@ -2,7 +2,9 @@
 :root {
   --theme-color: #20D3C2;
   --light-gray: #e3e3e3;
-  --dark-gray: #e3e3e3;
+  --dark-gray: #cccccc;
+  --dark-blue: #080c24;
+  --theme-layout-margin: calc(100vw / 6);
 }
 
 body {
@@ -37,18 +39,50 @@ h1 {
   background: var(--light-gray);
 }
 
+.dark-gray {
+  background: var(--dark-gray);
+}
+
+.dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.align-center {
+  align-content: center;
+  align-self: center;
+}
+
+.align-end {
+  align-self: flex-end;
+  right: 0px;
+}
+
+.align-start {
+  align-self: flex-start;
+  left: 0px;
+}
+
+.justify-content {
+  justify-content: space-around;
+}
+
 two-column-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-two-column-grid div:nth-child(1) {
-  grid-column: 1;
-}
-two-column-grid div:nth-child(2) {
-  grid-column: 2;
+
+three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 grid {
   display: grid;
+  gap: 30px;
 }
 
 .column0 {

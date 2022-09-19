@@ -1,123 +1,4 @@
-@charset "UTF-8";
 @import url(general.css);
-.top-menu {
-  justify-content: space-between;
-  align-content: center;
-  height: 40px;
-}
-.top-menu a,
-.top-menu div {
-  margin: 0 12px;
-  font-size: 16px;
-}
-.top-menu div {
-  display: flex;
-  align-self: center;
-  margin-left: -6px;
-  margin-right: -6px;
-}
-.top-menu div .fa {
-  margin: 0 11px 0 0;
-}
-.top-menu div .dropdown {
-  padding-right: 32px;
-  margin-left: -16px;
-}
-
-.account {
-  white-space: nowrap;
-}
-.account span {
-  margin-left: 6px;
-}
-
-.fa {
-  align-self: center;
-}
-
-input {
-  outline: none;
-  color: #AAAAAA;
-  background-color: white;
-  caret-color: black;
-  box-shadow: none;
-  border-radius: 23px;
-  border-width: 1px;
-  border-color: var(--light-gray);
-  font-size: 14px;
-  padding-left: 25px;
-}
-
-.searchbar {
-  flex-grow: 1;
-  height: 46px;
-  max-width: 522px;
-  min-width: 200px;
-  margin: auto;
-  position: relative;
-  display: inline-block;
-  width: 50%;
-  margin-left: 65px;
-  margin-right: 65px;
-}
-.searchbar input {
-  outline: none;
-  color: #AAAAAA;
-  height: 100%;
-  width: 100%;
-}
-.searchbar button {
-  width: 46px;
-  height: 46px;
-  border: none;
-  border-radius: 0 23px 23px 0;
-  position: absolute;
-  right: 0px;
-  display: inline;
-  text-align: center;
-}
-
-input:focus {
-  border-color: black;
-  color: black;
-}
-
-.cart::after {
-  margin-left: 6px;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  content: "€0.00";
-}
-
-.logo {
-  align-self: center;
-  min-width: 160px;
-  max-width: 160px;
-  min-height: 23px;
-  max-height: 23px;
-  cursor: pointer;
-}
-
-.special-offer {
-  align-self: flex-end;
-  margin-bottom: 5px;
-}
-
-.sub-menu {
-  justify-content: space-between;
-  align-content: center;
-  height: 40px;
-}
-.sub-menu .square-button {
-  margin-top: -6px;
-}
-
-.line {
-  height: 1px;
-  background-color: var(--light-gray);
-  margin-bottom: 6px;
-}
-
 .time-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -205,8 +86,12 @@ input:focus {
   color: black;
 }
 
+.subscribe {
+  background-color: var(--white);
+}
 .subscribe p {
   width: 400px;
+  margin-bottom: 27px;
 }
 .subscribe .dark-gray {
   width: 100%;
@@ -222,10 +107,6 @@ input:focus {
   top: 3px;
   bottom: 3px;
   height: unset;
-}
-
-p {
-  margin-bottom: 0;
 }
 
 .subscribe-textbox {
@@ -285,28 +166,6 @@ p {
 
 .font-size-36 {
   font-size: 36px !important;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.position-relative {
-  position: relative !important;
-}
-
-.position-absolute {
-  position: absolute !important;
 }
 
 .white-color {
@@ -430,25 +289,4 @@ two-column-grid > div {
 
 p.price {
   margin-bottom: 0;
-}
-
-@media only screen and (max-width: 1072px) {
-  .theme-layout-margin {
-    margin-left: 22px;
-    margin-right: 22px;
-    transition-property: margin-left, margin-right;
-    transition-duration: 1s;
-  }
-  .logo {
-    margin: auto;
-  }
-  .searchbar {
-    margin: auto;
-    margin: 22px;
-  }
-  .header {
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-  }
 }/*# sourceMappingURL=index.css.map */

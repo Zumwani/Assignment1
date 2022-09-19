@@ -18,7 +18,11 @@
         "css/index.css": true,
         "css/index.css.map": true,
         "css/product-data.css": true,
-        "css/product-data.css.map": true
+        "css/product-data.css.map": true,
+        "css/header.css.map": true,
+        "css/header.css": true,
+        "css/login.css.map": true,
+        "css/login.css": true
     },
     "hidefiles.selectedProfile": "Default",
     "html.format.wrapLineLength": 0

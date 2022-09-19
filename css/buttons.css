@@ -1,21 +1,22 @@
+.dropdown {
+  position: relative;
+}
 .dropdown::after {
   content: "\f107";
   font: normal normal normal 14px/1 FontAwesome;
   align-self: center;
-  margin-left: 4px;
-  margin-bottom: 2px;
+  margin-left: 6px;
+  margin-top: -3px;
+  right: 15px;
   font-size: 22px;
   text-align: right;
   position: absolute;
-  right: 14px;
 }
 
 a {
   color: black;
   text-decoration: none;
   align-self: center;
-  margin-left: 12px;
-  margin-right: 12px;
 }
 a:hover {
   color: black;
@@ -38,6 +39,7 @@ button {
   transition: background-color 0.1s;
   white-space: nowrap;
   border: none;
+  cursor: pointer;
 }
 button:hover {
   background-color: gray;

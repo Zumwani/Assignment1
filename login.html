@@ -34,22 +34,22 @@
 
         <two-column-grid class="theme-layout-margin section-container">
 
-            <div class="section flex-column">
+            <div class="section flex-column align-self-start">
 
                 <h1>LOGIN</h1>
                 <label for="email" class="required">Email address</label>
-                <input id="email"></input>
+                <input id="email" type="text"></input>
                 
                 <label for="password" class="required">Password</label>
-                <input id="password"></input>
+                <input id="password" type="text"></input>
                 
-                <button type="submit" class="round-button">LOG IN</button>
+                <button type="submit" class="round-button margin-bottom">LOG IN</button>
                 
-                <div class="position-relative margin">
-                    <label for="remember">Remember me</label>
+                <div class="position-relative">
                     <input id="remember" type="checkbox"></input>
+                    <label for="remember" class="remember-label">Remember me</label>
                     <div class="flex display-inline position-absolute align-end">
-                        <a href="" class="align-right">Lost your password?</a>
+                        <a href="" class="align-right theme-color">Lost your password?</a>
                     </div>
                 </div>
 
@@ -67,8 +67,27 @@
 
             </div>
 
-            <div class="section">
-                
+            <div class="section flex-column">
+
+                <h1>LOGIN</h1>
+                <p class="font-size-14 color-gray margin-top">Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+
+                <label for="firstname" class="required margin-top">Firstname</label>
+                <input id="firstname" type="text"></input>
+
+                <label for="lastname" class="required">Lastname</label>
+                <input id="lastname" type="text"></input>
+
+                <label for="email2" class="required">Email address</label>
+                <input id="email2" type="text"></input>
+
+                <label for="password" class="required">Password</label>
+                <input id="password" type="text"></input>
+
+                <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="" class="theme-color">privacy policy</a>.</p>
+
+                <button class="round-button margin-top">REGISTER</button>
+
             </div>
 
         </two-column-grid>

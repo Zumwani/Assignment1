@@ -51,18 +51,17 @@ button {
     white-space: nowrap;
     border: none;
     cursor: pointer;
+    transition: filter 0.1s ease;
     
     &:hover {
-        background-color: gray;
-        transition: background-color 0.1s;
+        filter: brightness(80%);
     }
 
     &.white {
         background-color: white;
         color: black;
         &:hover {
-            background-color: gray;
-            transition: background-color 0.1s;
+            filter: brightness(80%);
         }
     }
 
@@ -70,6 +69,7 @@ button {
 
 .square-button {
     padding: 6px 66px 6px 14px;
+    font-size: 18px;
 }
 
 .square-button.round-corners {
@@ -81,6 +81,7 @@ button {
     border-radius: 40px;
     height: 54px;
     width: fit-content;
+    transition: filter 0.1s ease;
 
     &.bg-white {
         color: var(--theme-color);
@@ -88,14 +89,10 @@ button {
 
     &.bg-black {
         color: white;
-        background-color: black;
-        transition: background-color 0.1s;
-        
     }
 
     &:hover {
-        background-color: gray !important;
-        transition: background-color 0.1s;
+        filter: brightness(80%);
     }
 
 }

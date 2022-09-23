@@ -2,6 +2,7 @@
 :root {
   --theme-color: #20D3C2;
   --light-gray: #e3e3e3;
+  --light-gray2: #777777;
   --light-gray-darker: #a3a3a3;
   --dark-gray: #cccccc;
   --dark-blue: #080c24;
@@ -158,7 +159,7 @@ grid {
 
 input {
   outline: none;
-  color: #AAAAAA;
+  color: black !important;
   background-color: white;
   caret-color: black;
   box-shadow: none;
@@ -170,6 +171,11 @@ input {
 }
 input:focus, input:active {
   border: 1px solid var(--light-gray-darker) !important;
+  color: black !important;
+}
+
+input[type=checkbox] {
+  accent-color: var(--theme-color);
 }
 
 footer {

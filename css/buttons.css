@@ -40,22 +40,22 @@ button {
   white-space: nowrap;
   border: none;
   cursor: pointer;
+  transition: filter 0.1s ease;
 }
 button:hover {
-  background-color: gray;
-  transition: background-color 0.1s;
+  filter: brightness(80%);
 }
 button.white {
   background-color: white;
   color: black;
 }
 button.white:hover {
-  background-color: gray;
-  transition: background-color 0.1s;
+  filter: brightness(80%);
 }
 
 .square-button {
   padding: 6px 66px 6px 14px;
+  font-size: 18px;
 }
 
 .square-button.round-corners {
@@ -69,18 +69,16 @@ button.white:hover {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  transition: filter 0.1s ease;
 }
 .round-button.bg-white {
   color: var(--theme-color);
 }
 .round-button.bg-black {
   color: white;
-  background-color: black;
-  transition: background-color 0.1s;
 }
 .round-button:hover {
-  background-color: gray !important;
-  transition: background-color 0.1s;
+  filter: brightness(80%);
 }
 
 .category-button {

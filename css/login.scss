@@ -47,6 +47,24 @@ body {
     min-height: 200px;
     padding: 30px;
     width: 540px;
+    border-radius: 6px;
+    margin-top: 120px;
+    margin-bottom: 130px; //Template is inconsistent...
+
+}
+
+[type=text] {
+    height: 42px;
+    border-radius: 4px;
+    padding-left: 12px;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+.color-gray {
+    color: var(--light-gray2);
 }
 
 .required::after {
@@ -63,10 +81,11 @@ h1 {
 
 label {
     font-style: normal;
-    margin-bottom: 4px;
+    user-select: none;
 }
 
 input {
+    margin-top: 4px;
     margin-bottom: 26px;
 }
 
@@ -100,6 +119,7 @@ button.sso {
     width: 100%;
     border-radius: 8px;
     height: 42px;
+    transition: filter 0.1s ease;
 
     &.facebook {
         background-color: #3b5998;
@@ -121,6 +141,10 @@ button.sso {
 
     }
 
+    &:hover {
+        filter: brightness(80%);
+    }
+
     position: relative;
 
     i {
@@ -136,9 +160,11 @@ button.sso {
         bottom: 8px;
     }
 
-
 }
 
 .margin-top {
     margin-top: 22px;
+}
+.margin-bottom {
+    margin-bottom: 22px;
 }

@@ -68,7 +68,6 @@ a {
 }
 .searchbar input {
   outline: none;
-  color: #AAAAAA;
   height: 100%;
   width: 100%;
 }
@@ -82,6 +81,7 @@ a {
   bottom: 1px;
   display: inline;
   text-align: center;
+  padding-right: 9px;
 }
 
 .cart::after {
@@ -104,6 +104,8 @@ a {
   align-self: center;
   height: 37px;
   margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: medium;
 }
 
 .sub-menu {
@@ -123,4 +125,8 @@ a {
 
 .fa {
   align-self: center;
+}
+
+button {
+  font-family: roboto;
 }/*# sourceMappingURL=header.css.map */

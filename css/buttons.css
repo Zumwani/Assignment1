@@ -140,6 +140,9 @@ button.product {
   background-color: #eeeeee;
   border-radius: 4px;
 }
+button.product:hover {
+  filter: none;
+}
 button.product .container {
   position: absolute;
   background-color: #292f51;
@@ -152,6 +155,7 @@ button.product .container {
   text-align: left;
   height: 38px;
   opacity: 85%;
+  border-radius: 4px;
   transition: all 0.15s;
 }
 button.product .container p {
@@ -166,27 +170,37 @@ button.product .container .header {
   margin-bottom: 0;
   transition: all 0.1s;
 }
-button.product .container .popup {
+button.product .popup-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+button.product .popup-container:hover {
+  opacity: 1;
+}
+button.product .popup {
   background-color: white;
   border-radius: 23px;
   position: absolute;
   right: 15px;
   top: 15px;
   width: 46px;
-  opacity: 0;
+  opacity: 1;
   padding: 23px 13px;
 }
-button.product .container .popup a {
+button.product .popup a {
   margin-top: 15px;
 }
-button.product .container .popup a:hover {
+button.product .popup a:hover {
   color: var(--theme-color);
 }
-button.product .container .popup a:nth-child(1) {
+button.product .popup a:nth-child(1) {
   margin-top: 0;
   color: #FE6C6C;
 }
-button.product .container .popup a:nth-child(1):hover {
+button.product .popup a:nth-child(1):hover {
   color: var(--theme-color);
 }
 button.product:hover .container {

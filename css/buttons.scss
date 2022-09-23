@@ -51,8 +51,9 @@ button {
     white-space: nowrap;
     border: none;
     cursor: pointer;
+    // margin-top: 12px;
     transition: filter 0.1s ease;
-    
+
     &:hover {
         filter: brightness(80%);
     }
@@ -166,6 +167,10 @@ button.product {
     background-color: #eeeeee;
     border-radius: 4px;
 
+    &:hover {
+        filter: none;
+    }
+
     .container {
         position: absolute;
         background-color: #292f51;
@@ -178,6 +183,7 @@ button.product {
         text-align: left;
         height: 38px;
         opacity: 85%;
+        border-radius: 4px;
         transition: all 0.15s;
         
         p {
@@ -194,40 +200,53 @@ button.product {
             transition: all 0.1s;
         }
         
-        .popup {
-            background-color: white;
-            border-radius: 23px;
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            width: 46px;
-            opacity: 0;
-            padding: 23px 13px;
-            
-            a {
-                margin-top: 15px;
-                &:hover {
-                    color: var(--theme-color);
-                }
+    }
+    
+    .popup-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.1s ease;
 
-            }
+        &:hover {
+            opacity: 1;
+        }
 
-            a:nth-child(1) {
-                margin-top: 0;
-                color: #FE6C6C;
-                &:hover {
-                    color: var(--theme-color);
-                }
+    }
+
+    .popup {
+        background-color: white;
+        border-radius: 23px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 46px;
+        opacity: 1;
+        padding: 23px 13px;
+
+        a {
+            margin-top: 15px;
+            &:hover {
+                color: var(--theme-color);
             }
 
         }
 
+        a:nth-child(1) {
+            margin-top: 0;
+            color: #FE6C6C;
+            &:hover {
+                color: var(--theme-color);
+            }
+        }
+
     }
-    
+
     &:hover .container {
         
         height: 100%;
-        
+
         p {
             opacity: 100%;
         }

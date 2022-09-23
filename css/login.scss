@@ -1,16 +1,11 @@
 @import url(general.css);
 
 footer {
-    clear: both;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     color: white;
 }
 
-body {
-    margin-bottom: 80px;
+p {
+    margin-bottom: 0;
 }
 
 .breadcrumb {
@@ -123,22 +118,12 @@ button.sso {
 
     &.facebook {
         background-color: #3b5998;
-
-
-        i {
-            color: #3b5998;
-        }
-    
-
+        i { color: #3b5998; }
     }
 
     &.google {
         background-color: #4285f4;
-
-        i {
-            color: red;
-        }    
-
+        i { color: red; }    
     }
 
     &:hover {
@@ -155,7 +140,7 @@ button.sso {
         padding-right: 1px;
         border-radius: 3px;
         position: absolute;
-        left: 6px;
+        left: 8px;
         top: 8px;
         bottom: 8px;
     }

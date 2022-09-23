@@ -46,10 +46,6 @@ h1 {
   color: var(--theme-color);
 }
 
-p {
-  margin-bottom: 0;
-}
-
 .theme-layout-margin {
   margin-left: 16.6666666667%;
   margin-right: 16.6666666667%;

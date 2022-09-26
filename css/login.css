@@ -7,6 +7,11 @@ p {
   margin-bottom: 0;
 }
 
+.form-error {
+  margin-bottom: 12px;
+  color: red;
+}
+
 .breadcrumb {
   color: white !important;
   background-color: #50546e;
@@ -42,7 +47,7 @@ p {
   margin-bottom: 130px;
 }
 
-[type=text] {
+[type=text], [type=password] {
   height: 42px;
   border-radius: 4px;
   padding-left: 12px;

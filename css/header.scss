@@ -1,10 +1,5 @@
 @import url(general.css);
 
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
 @media only screen and (max-width: 1072px) {
 
     .logo {
@@ -24,26 +19,13 @@ body {
 
 }
 
-three-column-grid {
+header three-column-grid {
     gap: 0;
 }
 
 .header-buttons-that-are-being-annoying {
     margin-bottom: 12px;
     a { margin-left: 10px; }
-}
-
-.stretch-height {
-    top: 0;
-    bottom: 0;
-}
-
-.position-relative {
-    position: relative;
-}
-
-.position-absolute {
-    position: absolute;
 }
 
 .header {
@@ -151,6 +133,7 @@ three-column-grid {
 
     .square-button {
         margin-top: -6px;
+        height: calc(100% + 6px);
     }
 
 }
@@ -161,10 +144,10 @@ three-column-grid {
     margin-bottom: 6px;
 }
 
-.fa {
+header .fa {
     align-self: center;
 }
 
-button {
+header button {
     font-family: roboto;
 }

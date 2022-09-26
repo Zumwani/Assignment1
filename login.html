@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="description" content="Log in - Kenkata">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,47 @@
     <link href="css/login.css" rel="stylesheet">
     <link href="css/product-data.css" rel="stylesheet">
     <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
+
+    <script>
+
+        function login(e) {
+            e.preventDefault();
+            onError("Email or password was incorrect.");
+            return false;
+        }
+        
+        function register(e) {
+            e.preventDefault();
+            onError("Email address already exists.");
+            return false;
+        }
+
+        function sso_facebook(e) {
+            e.preventDefault();
+        }
+
+        function sso_google(e) {
+            e.preventDefault();
+        }
+
+        function onError(text, type) {
+            //Doesn't work since page reloads when submitting form.
+            //Only solution seems to be to place button outside, but
+            //then we lose 'required' and 'pattern' functionality...
+            document.querySelector(".form-error ." + text).innerText = text;
+        }
+
+    </script>
+
 </head>
 <body>
 
     <!--Header-->
     <iframe src="header.html" scrolling="no"></iframe>
 
+    <!--Breadcrumb-->
     <div class="breadcrumb flex">
-
+        
         <div class="theme-layout-margin flex position-relative width-stretch">
             <a href="" class="theme-color">My Account</a>
             <div class="align-end position-absolute flex">
@@ -27,24 +61,26 @@
                 <a href="" class="white">My Account</a>
             </div>
         </div>
-
+        
     </div>
-
-    <form method="post">
-
-        <two-column-grid class="theme-layout-margin section-container">
-
-            <div class="section flex-column align-self-start">
-
+    
+    <two-column-grid class="theme-layout-margin section-container">
+        
+        <!--Login-->
+        <div class="section align-self-start">
+            
+            <form method="post" class="flex-column">
+                
                 <h1>LOGIN</h1>
                 <label for="email" class="required">Email address</label>
-                <input id="email" type="text"></input>
+                <input id="email" type="text" required pattern=".*@.*\..{1,}" placeholder="example@domain.com"></input>
                 
                 <label for="password" class="required">Password</label>
-                <input id="password" type="text"></input>
+                <input id="password" type="password" required></input>
                 
-                <button type="submit" class="round-button margin-bottom">LOG IN</button>
-                
+                <button type="submit" onsubmit="login" class="round-button margin-bottom">LOG IN</button>
+                <p class="form-error login"></p>
+
                 <div class="position-relative">
                     <input id="remember" type="checkbox"></input>
                     <label for="remember" class="remember-label">Remember me</label>
@@ -52,55 +88,58 @@
                         <a href="" class="align-right theme-color">Lost your password?</a>
                     </div>
                 </div>
+                
+            </form>
 
-                <div class="position-relative login-sso-header">
-                    <div class="flex justify-content-center">
-                        <div class="line"></div>
-                        <h6>OR LOGIN WITH</h6>
-                    </div>
+            <div class="position-relative login-sso-header">
+                <div class="flex justify-content-center">
+                    <div class="line"></div>
+                    <h6>OR LOGIN WITH</h6>
                 </div>
-
-                <div class="flex gap-2 margin-top">
-                    <button class="sso facebook"><i class="fa fa-facebook"></i>Facebook</button>
-                    <button class="sso google"><i class="fa fa-google"></i>Google</button>
-                </div>
-
             </div>
 
-            <div class="section flex-column">
+            <div class="flex gap-2 margin-top">
+                <button onsubmit="sso_facebook" class="sso facebook"><i class="fa fa-facebook"></i>Facebook</button>
+                <button onsubmit="sso_google"class="sso google"><i class="fa fa-google"></i>Google</button>
+            </div>
 
-                <h1>LOGIN</h1>
+        </div>
+        
+        <!--Register-->
+        <div class="section">
+            <form class="flex-column">
+            
+                <h1>REGISTER</h1>
                 <p class="font-size-14 color-gray margin-top">Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
 
                 <label for="firstname" class="required margin-top">Firstname</label>
-                <input id="firstname" type="text"></input>
+                <input id="firstname" type="text" required></input>
 
                 <label for="lastname" class="required">Lastname</label>
-                <input id="lastname" type="text"></input>
+                <input id="lastname" type="text" required></input>
 
                 <label for="email2" class="required">Email address</label>
-                <input id="email2" type="text"></input>
+                <input id="email2" type="text" required pattern=".*@.*\..{1,}" placeholder="example@domain.com"></input>
 
                 <label for="password" class="required">Password</label>
-                <input id="password" type="text"></input>
+                <input id="password" type="password" required></input>
 
                 <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="" class="theme-color">privacy policy</a>.</p>
 
-                <button class="round-button margin-top">REGISTER</button>
-
-            </div>
-
-        </two-column-grid>
-
-    </form>
-
+                <button onsubmit="register" class="round-button margin-top">REGISTER</button>
+                <p class="form-error register"></p>
+                
+            </form>
+        </div>
+            
+    </two-column-grid>
+        
     <!--Footer-->
     <footer class="flex dark-blue">
         <p class="theme-layout-margin margin white-color">© Copyright 2022 Kenkata</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <!---<script src="script.js"></script>-->
         
 </body>
 </html>

@@ -5,15 +5,41 @@
 
 <header>
     
-    <!--Top: language / social links-->
+    <!--Top: language / socials-->
     <div class="theme-background">
         
         <div class="horizontal top-menu theme-layout-margin">
             
+            <!--Not really sure what these two are, they seem like language selectors, but why two then?-->
             <div>
-                <a href="" class="dropdown white">ENG</a>
-                <a href="" class="dropdown white">EUR</a>
+                
+                <div class="dropdown">
+
+                    <a href="#" class="white icon">ENG</a>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">English UK</a>
+                        <a class="dropdown-item" href="">English US</a>
+                        <a class="dropdown-item" href="">Swedish (Svenska)</a>
+                    </div>
+
+                </div>
+
+                <div class="dropdown">
+
+                    <a href="#" class="white icon">EUR</a>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">English UK</a>
+                        <a class="dropdown-item" href="">English US</a>
+                        <a class="dropdown-item" href="">Swedish (Svenska)</a>
+                    </div>
+
+                </div>
+
             </div>
+
+            <!--Socials-->
             <div>
                 <a href="" class="white">Newsletter</a>
                 <a href="" class="white">Contact us</a>
@@ -31,15 +57,18 @@
     <!--Middle: Logo / search bar / user pages links -->
     <three-column-grid class="theme-layout-margin margin header flex stretch-width position-relative">
 
+        <!--Logo-->
         <a href="">
             <img src="img/logo.svg"></img>
         </a>
 
+        <!--Search-->
         <div class="searchbar flex-grow-1">
             <input title="Search products..." placeholder="Search products..."></input>
             <button type="submit" class="searchbutton fa fa-search"></button>
         </div>
         
+        <!--Account, cart and such-->
         <div class="header-buttons-that-are-being-annoying align-end position-absolute">
             <a href="/login.html" class="fa-regular fa-user account"><span>My Account</span></a>
             <a href="" class="far fa-heart align-end"></a>
@@ -53,7 +82,20 @@
     
     <!--Bottom: browse categories / special offer-->
     <div class="horizontal theme-layout-margin sub-menu">
-        <button class="square-button dropdown">☰ Browse categories</button>
+
+        <button class="square-button dropdown no-padding">
+
+            <p class="icon no-margin">☰ Browse categories</p>
+
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="">English UK</a>
+                <a class="dropdown-item" href="">English US</a>
+                <a class="dropdown-item" href="">Swedish (Svenska)</a>
+            </div>
+
+        </button>
+
+
         <button class="round-button special-offer">Special offer</button>
     </div>
 

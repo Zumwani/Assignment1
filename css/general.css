@@ -13,21 +13,19 @@
 
 iframe {
   width: 100%;
-  height: 177px;
+  height: 200px;
   margin-bottom: -7px;
 }
 
-@media only screen and (max-width: 1072px) {
-  .theme-layout-margin {
-    margin-left: 22px;
-    margin-right: 22px;
-    transition-property: margin-left, margin-right;
-    transition-duration: 1s;
-  }
+img, section {
+  overflow: clip;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;
+  margin: 0;
+  overflow-x: clip;
 }
 
 h1 {
@@ -51,6 +49,14 @@ h1 {
   margin-right: 16.6666666667%;
   transition-property: margin-left, margin-right;
   transition-duration: 1s;
+}
+@media only screen and (max-width: 1072px) {
+  .theme-layout-margin {
+    margin-left: 22px;
+    margin-right: 22px;
+    transition-property: margin-left, margin-right;
+    transition-duration: 1s;
+  }
 }
 
 .gray {
@@ -111,7 +117,24 @@ three-column-grid {
   width: -moz-fit-content;
   width: fit-content;
 }
+@media only screen and (max-width: 1450px) {
+  three-column-grid:not(.disable-small-viewport) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 810px) {
+  three-column-grid:not(.disable-small-viewport) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
 
+@media only screen and (max-width: 1450px) {
+  .small-viewport-hide {
+    display: none;
+  }
+}
 grid {
   display: grid;
   gap: 30px;
@@ -136,6 +159,14 @@ grid {
 .margin {
   margin-top: 22px;
   margin-bottom: 22px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
 }
 
 .bottom {
@@ -202,4 +233,17 @@ footer {
 
 *[data-tooltip]:hover::after {
   opacity: 1;
+}
+
+.stretch-height {
+  top: 0;
+  bottom: 0;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
 }/*# sourceMappingURL=general.css.map */

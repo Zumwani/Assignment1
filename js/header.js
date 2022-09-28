@@ -1,7 +1,6 @@
 loadHeader();
 async function loadHeader() {
     const element = await fetchElement("header.html", "header");
-    console.log(element);
     document.querySelector("#header").appendChild(element);
 }
 

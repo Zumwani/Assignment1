@@ -1,64 +1,5 @@
 @import url(general.css);
-.subscribe {
-  background-color: var(--white);
-}
-.subscribe p {
-  width: 400px;
-  margin-bottom: 27px;
-}
-.subscribe .dark-gray {
-  width: 100%;
-  height: 100%;
-}
-.subscribe input {
-  width: 100%;
-  height: 100%;
-}
-.subscribe button {
-  position: absolute;
-  right: 3px;
-  top: 3px;
-  bottom: 3px;
-  height: unset;
-}
-@media only screen and (max-width: 1450px) {
-  .subscribe div {
-    margin-right: 12px;
-  }
-}
-
-.subscribe-textbox {
-  position: relative;
-  height: 46px;
-  width: 445px;
-}
-
-.section {
-  width: 100%;
-  min-height: 418px;
-}
-.section.large {
-  min-height: 600px;
-}
-.section .section-side {
-  width: 390px;
-  align-self: center;
-}
-@media only screen and (max-width: 1072px) {
-  .section .section-side {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-}
-.section h1 {
-  font-size: 64px;
-}
-.section button {
-  font-size: 18px;
-  font-family: "roboto", "sans-serif";
-}
-
+@import url(product-data.css);
 .info-container {
   justify-content: space-around;
   padding-left: 120px;
@@ -75,8 +16,8 @@ button.info-box {
   color: black;
   text-align: left;
   white-space: normal;
-  transition: all 0.1s ease-in-out;
   position: relative;
+  transition: background-color 0.25s ease;
 }
 button.info-box div {
   width: 100%;
@@ -93,7 +34,44 @@ button.info-box img {
   left: 22px;
 }
 button.info-box:hover {
-  transition: all 0.1s ease-in-out;
+  background-color: var(--theme-color);
+  color: white;
+  filter: none;
+}
+button.info-box:hover h5 {
+  color: inherit;
+}
+
+.squigly-line {
+  background-image: url("../img/squigly-line.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  width: 100%;
+  height: 42px;
+  display: block;
+}
+
+.section-text {
+  max-width: 445px;
+  font-size: 14px;
+  color: white;
+}
+
+.section-text2 {
+  width: 445px;
+  font-size: 14px;
+  color: white;
+}
+
+.alt-section-background {
+  background-color: #292f51;
+}
+
+.banner {
+  width: 255px;
+  min-height: 265px;
+  text-align: center;
 }
 
 .category-grid {
@@ -191,12 +169,12 @@ p.price {
   gap: 26px;
   margin-bottom: 27px;
   padding-left: 0;
+  margin-top: 22px;
 }
 @media only screen and (max-width: 1350px) {
   .time-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin-left: 125px;
   }
 }
 
@@ -230,58 +208,95 @@ p.price {
 }
 .time-circle p {
   font-size: 16px;
+  margin-top: 0;
 }
 
 .top-sellers-grid {
+  position: relative;
+  margin: auto;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "a b" "a c";
   gap: 30px;
 }
 .top-sellers-grid .product {
-  height: 200px;
+  height: 345px;
+  width: 547px;
 }
 .top-sellers-grid .product:nth-child(1) {
   height: 100%;
+  width: 550px;
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1200px) {
   .top-sellers-grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "a" "b" "c";
   }
+  .top-sellers-grid .product:nth-child(1) {
+    height: 100%;
+    width: 100%;
+  }
 }
 
-.squigly-line {
-  background-image: url("../img/squigly-line.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  align-self: center;
+.subscribe {
+  background-color: var(--white);
+}
+.subscribe p {
+  width: 400px;
+  margin-bottom: 27px;
+}
+.subscribe .dark-gray {
   width: 100%;
-  height: 42px;
-  display: block;
+  height: 100%;
+}
+.subscribe input {
+  width: 100%;
+  height: 100%;
+}
+.subscribe button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  height: unset;
+}
+@media only screen and (max-width: 1450px) {
+  .subscribe div {
+    margin-right: 12px;
+  }
 }
 
-.section-text {
-  max-width: 445px;
-  font-size: 14px;
-  color: white;
-}
-
-.section-text2 {
+.subscribe-textbox {
+  position: relative;
+  height: 46px;
   width: 445px;
-  font-size: 14px;
-  color: white;
 }
 
-.alt-section-background {
-  background-color: #292f51;
+.section {
+  width: 100%;
+  min-height: 418px;
 }
-
-.banner {
-  width: 255px;
-  min-height: 265px;
-  text-align: center;
+.section.large {
+  min-height: 600px;
+}
+.section .section-side {
+  width: 390px;
+  align-self: center;
+}
+@media only screen and (max-width: 1072px) {
+  .section .section-side {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.section h1 {
+  font-size: 64px;
+}
+.section button {
+  font-size: 18px;
+  font-family: "roboto", "sans-serif";
 }
 
 two-column-grid > div {

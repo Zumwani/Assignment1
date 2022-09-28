@@ -4,7 +4,12 @@
     
     position: relative;
     display: inline-block;
-    
+    min-width: 22px;
+    min-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    font-family: roboto;
+
     .icon::after {
         content: "\f107";
         font: normal normal normal 14px/1 FontAwesome;
@@ -31,6 +36,7 @@
 }
 
 .dropdown-menu {
+
     top: 100%;
     left: 0;
     padding: 12px;
@@ -41,6 +47,12 @@
     width: fit-content;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
+
+    &.align-right {
+        left: unset;
+        right: 0;
+    }
+
 }
 
 .dropdown-item {
@@ -50,7 +62,12 @@
     display: block;
     white-space: pre !important;
     word-break: keep-all;
-    width: fit-content;
+    width: 100%;
+
+    span {
+        margin-left: 6px;
+    }
+
 }
 
 .dropdown:hover .dropdown-menu, .dropdown-menu:hover {
@@ -87,10 +104,6 @@
         color: white;
     }
     
-    &:hover {
-        filter: brightness(80%);
-    }
-    
 }
 
 //#endregion
@@ -106,6 +119,7 @@
     overflow: hidden;
     
     p {
+        margin-top: 0; 
         margin-bottom: 0;
     }
 
@@ -288,10 +302,14 @@ a {
     color: black;
     text-decoration: none;
     align-self: center;
-    
+    cursor: pointer;
+    text-shadow: none;
+    transition: text-shadow 0.1s ease;
+
     &:hover {
-        color: black;
+        text-shadow: 1px 1px 1px black;
         font-weight: bold;
+        color: black;
     }
     
     span {
@@ -299,14 +317,14 @@ a {
         font-family: 'Roboto', sans-serif;
     }
     
-}
-
-a.white {
-    
-    color: white;
-    
-    &:hover {
-        color: black;
+    &.white {
+        
+        color: white;
+        
+        &:hover {
+            color: black;
+        }
+        
     }
-    
+
 }

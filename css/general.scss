@@ -1,4 +1,5 @@
 @import url(buttons.css);
+@import url(header.css);
 
 :root {
     --theme-color: #20D3C2;
@@ -23,6 +24,12 @@ body {
 
 h1 {
     font-family: 'Play', sans-serif;
+    color: black;
+}
+
+p {
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 label {
@@ -80,11 +87,11 @@ footer {
     color: white;
 }
 
-.color-gray {
+.background-gray {
     background: var(--light-gray);
 }
 
-.color-dark-gray {
+.background-dark-gray {
     background: var(--dark-gray);
 }
 
@@ -222,7 +229,65 @@ three-column-grid {
 }
 
 //#endregion
-//#region Align
+//#region Small viewport
+
+.large-viewport-hide {
+    @media only screen and (min-width: 1065px) {
+        display: none;
+    }
+}
+
+:not(.disable-small-viewport) {
+    
+    @media only screen and (max-width: 1500px) {
+        
+        .small-viewport-hide {
+            display: none;
+        }
+        
+        three-column-grid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .theme-layout-margin {
+            margin-left: 22px;
+            margin-right: 44px;
+            transition-property: margin-left, margin-right;
+            transition-duration: 1s;
+        }
+        
+    }
+
+    @media only screen and (max-width: 1064px) {
+        
+        .extra-small-viewport-hide {
+            display: none;
+        }
+        
+    }
+
+    @media only screen and (max-width: 810px) {
+            
+        three-column-grid:not(.disable-small-viewport) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+    }
+
+}
+
+//#endregion
+//#region Utility
+
+.width-547 {
+    width: 547px;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
 
 .align-center {
     align-content: center;
@@ -246,47 +311,6 @@ three-column-grid {
 .justify-content {
     justify-content: space-around;
 }
-
-//#endregion
-//#region Small viewport
-
-:not(.disable-small-viewport) {
-    
-    @media only screen and (max-width: 1450px) {
-        
-        .small-viewport-hide {
-            display: none;
-        }
-        
-        three-column-grid {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-        }
-
-    }
-
-    @media only screen and (max-width: 1072px) {
-        .theme-layout-margin {
-            margin-left: 22px;
-            margin-right: 22px;
-            transition-property: margin-left, margin-right;
-            transition-duration: 1s;
-        }
-    }
-
-    @media only screen and (max-width: 810px) {
-            
-        three-column-grid {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-        }
-
-    }
-
-}
-
-//#endregion
-//#region Utility
 
 .center {
     align-items: center;
@@ -333,17 +357,14 @@ three-column-grid {
     bottom: 0;
 }
 
+.right {
+    position: absolute;
+    right: 0;
+}
+
 .bottom {
     position: absolute;
     bottom: 0;
-}
-
-.position-relative {
-    position: relative;
-}
-
-.position-absolute {
-    position: absolute;
 }
 
 .horizontal {

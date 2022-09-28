@@ -1,4 +1,21 @@
 @import url(general.css);
+@media only screen and (max-width: 1200px) {
+  two-column-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .section {
+    position: relative;
+    margin: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 0 !important;
+  }
+  .section:nth-last-of-type(1) {
+    margin-top: -100px !important;
+  }
+}
 .breadcrumb {
   color: white !important;
   background-color: #50546e;
@@ -39,6 +56,7 @@ footer {
 }
 
 p {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -70,7 +88,7 @@ h1 {
   margin-bottom: 26px;
 }
 
-.round-button {
+.section .round-button {
   width: 100%;
 }
 

@@ -1,4 +1,3 @@
-<link href="css/header.css" rel="stylesheet">
 <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
 <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -57,7 +56,7 @@
     </div>
 
     <!--Middle: Logo / search bar / user pages links -->
-    <three-column-grid class="theme-layout-margin margin-top-bottom-22 header flex stretch-width position-relative">
+    <div class="header theme-layout-margin margin-top-bottom-22 horizontal position-relative">
 
         <!--Logo-->
         <a href="">
@@ -71,14 +70,30 @@
         </div>
         
         <!--Account, cart and such-->
-        <div class="header-buttons-that-are-being-annoying align-end position-absolute">
+        <div class="header-buttons-that-are-being-annoying right extra-small-viewport-hide">
             <a href="/login.html" class="fa-regular fa-user account"><span>My Account</span></a>
             <a href="" class="far fa-heart align-end"></a>
             <a href="" class="fa-regular fa-shuffle"></a>
-            <a href="" class="fa fa-shopping-bag cart"></a>
+            <a href="" class="fa fa-shopping-bag cart font-weight-400"></a>
         </div>
 
-    </three-column-grid>
+        <!--Menu for when viewport small (< 1500px)-->
+        <div class="large-viewport-hide position-absolute right">
+            <div class="dropdown">
+                
+                <a href="#">⋮</a>
+                
+                <div class="dropdown-menu align-right">
+                    <a href="/login.html" class="dropdown-item fa-regular fa-user account"><span>My Account</span></a>
+                    <a href="" class="dropdown-item far fa-heart align-end"><span>Favorites</span></a>
+                    <a href="" class="dropdown-item fa-regular fa-shuffle"><span>Shuffle</span></a>
+                    <a href="" class="dropdown-item fa fa-shopping-bag font-weight-400"><span>Cart</span></a>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
 
     <div class="line"></div>
     

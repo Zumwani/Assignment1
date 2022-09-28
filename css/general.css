@@ -1,4 +1,5 @@
 @import url(buttons.css);
+@import url(header.css);
 :root {
   --theme-color: #20D3C2;
   --light-gray: #e3e3e3;
@@ -20,6 +21,12 @@ body {
 
 h1 {
   font-family: "Play", sans-serif;
+  color: black;
+}
+
+p {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 label {
@@ -75,11 +82,11 @@ footer {
   color: white;
 }
 
-.color-gray {
+.background-gray {
   background: var(--light-gray);
 }
 
-.color-dark-gray {
+.background-dark-gray {
   background: var(--dark-gray);
 }
 
@@ -200,6 +207,47 @@ three-column-grid {
   font-size: 60px !important;
 }
 
+@media only screen and (min-width: 1065px) {
+  .large-viewport-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  :not(.disable-small-viewport) .small-viewport-hide {
+    display: none;
+  }
+  :not(.disable-small-viewport) three-column-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  :not(.disable-small-viewport) .theme-layout-margin {
+    margin-left: 22px;
+    margin-right: 44px;
+    transition-property: margin-left, margin-right;
+    transition-duration: 1s;
+  }
+}
+@media only screen and (max-width: 1064px) {
+  :not(.disable-small-viewport) .extra-small-viewport-hide {
+    display: none;
+  }
+}
+@media only screen and (max-width: 810px) {
+  :not(.disable-small-viewport) three-column-grid:not(.disable-small-viewport) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.width-547 {
+  width: 547px;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
 .align-center {
   align-content: center;
   align-self: center;
@@ -221,30 +269,6 @@ three-column-grid {
 
 .justify-content {
   justify-content: space-around;
-}
-
-@media only screen and (max-width: 1450px) {
-  :not(.disable-small-viewport) .small-viewport-hide {
-    display: none;
-  }
-  :not(.disable-small-viewport) three-column-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
-@media only screen and (max-width: 1072px) {
-  :not(.disable-small-viewport) .theme-layout-margin {
-    margin-left: 22px;
-    margin-right: 22px;
-    transition-property: margin-left, margin-right;
-    transition-duration: 1s;
-  }
-}
-@media only screen and (max-width: 810px) {
-  :not(.disable-small-viewport) three-column-grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
 }
 
 .center {
@@ -294,17 +318,14 @@ three-column-grid {
   bottom: 0;
 }
 
+.right {
+  position: absolute;
+  right: 0;
+}
+
 .bottom {
   position: absolute;
   bottom: 0;
-}
-
-.position-relative {
-  position: relative;
-}
-
-.position-absolute {
-  position: absolute;
 }
 
 .horizontal {

@@ -51,11 +51,13 @@ header three-column-grid {
   padding-right: 32px;
 }
 
-.account {
-  white-space: nowrap;
-}
-.account span {
-  margin-left: 6px;
+.logo {
+  align-self: center;
+  min-width: 160px;
+  max-width: 160px;
+  min-height: 23px;
+  max-height: 23px;
+  cursor: pointer;
 }
 
 .searchbar {
@@ -88,28 +90,18 @@ header three-column-grid {
   padding-right: 9px;
 }
 
+.account {
+  white-space: nowrap;
+}
+.account span {
+  margin-left: 6px;
+}
+
 .cart::after {
   margin-left: 6px;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   content: "€0.00";
-}
-
-.logo {
-  align-self: center;
-  min-width: 160px;
-  max-width: 160px;
-  min-height: 23px;
-  max-height: 23px;
-  cursor: pointer;
-}
-
-.special-offer {
-  align-self: center;
-  height: 37px;
-  margin-bottom: 5px;
-  font-size: 16px;
-  font-weight: medium;
 }
 
 .sub-menu {
@@ -122,16 +114,16 @@ header three-column-grid {
   height: calc(100% + 6px);
 }
 
+.special-offer {
+  align-self: center;
+  height: 37px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: medium;
+}
+
 header .line {
   height: 1px;
   background-color: var(--light-gray);
   margin-bottom: 6px;
-}
-
-header .fa {
-  align-self: center;
-}
-
-header button {
-  font-family: roboto;
 }/*# sourceMappingURL=header.css.map */

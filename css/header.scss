@@ -19,6 +19,8 @@
 
 }
 
+//#region Top
+
 header three-column-grid {
     gap: 0;
 }
@@ -37,39 +39,44 @@ header three-column-grid {
 }
 
 .top-menu {
-
+    
     justify-content: space-between;
     align-content: center;
     height: 40px;
-
+    
     a,
     div {
         font-size: 16px;
         gap: 10px;
     }
-
+    
     div {
-
+        
         display: flex;
         align-self: center;
-
+        
         .dropdown {
             padding-right: 32px;
         }
-
+        
     }
-
+    
 }
 
-.account {
-    white-space: nowrap;
-    span {
-        margin-left: 6px;
-    }
+//#endregion
+//#region Middle
+
+.logo {
+    align-self: center;
+    min-width: 160px;
+    max-width: 160px;
+    min-height: 23px;
+    max-height: 23px;
+    cursor: pointer;
 }
 
 .searchbar {
-
+    
     flex-grow: 1;
     height: 46px;
     max-width: 522px;
@@ -86,7 +93,7 @@ header three-column-grid {
         height: 100%;
         width: 100%;
     }
-
+    
     button {
         width: 46px;
         border: none;
@@ -99,7 +106,14 @@ header three-column-grid {
         text-align: center;
         padding-right: 9px;
     }
+    
+}
 
+.account {
+    white-space: nowrap;
+    span {
+        margin-left: 6px;
+    }
 }
 
 .cart::after {
@@ -109,13 +123,19 @@ header three-column-grid {
     content: "€0.00";
 }
 
-.logo {
-    align-self: center;
-    min-width: 160px;
-    max-width: 160px;
-    min-height: 23px;
-    max-height: 23px;
-    cursor: pointer;
+//#endregion
+//#region Bottom
+
+.sub-menu {
+    justify-content: space-between;
+    align-content: center;
+    height: 40px;
+    
+    .square-button {
+        margin-top: -6px;
+        height: calc(100% + 6px);
+    }
+    
 }
 
 .special-offer {
@@ -126,28 +146,10 @@ header three-column-grid {
     font-weight: medium;
 }
 
-.sub-menu {
-    justify-content: space-between;
-    align-content: center;
-    height: 40px;
-
-    .square-button {
-        margin-top: -6px;
-        height: calc(100% + 6px);
-    }
-
-}
-
 header .line {
     height: 1px;
     background-color: var(--light-gray);
     margin-bottom: 6px;
 }
 
-header .fa {
-    align-self: center;
-}
-
-header button {
-    font-family: roboto;
-}
+//#endregion

@@ -1,8 +1,10 @@
-.dropdown {
+//#region Dropdown
 
+.dropdown {
+    
     position: relative;
     display: inline-block;
-
+    
     .icon::after {
         content: "\f107";
         font: normal normal normal 14px/1 FontAwesome;
@@ -55,57 +57,8 @@
     display: block !important; 
 }
 
-a {
-    
-    color: black;
-    text-decoration: none;
-    align-self: center;
-
-    &:hover {
-        color: black;
-        font-weight: bold;
-    }
-        
-    span {
-        font-size: 16px;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-}
-
-a.white {
-
-    color: white;
-    
-    &:hover {
-        color: black;
-    }
-    
-}
-
-button {
-
-    background-color: var(--theme-color);
-    color: white;
-    transition: background-color 0.1s;
-    white-space: nowrap;
-    border: none;
-    cursor: pointer;
-    transition: filter 0.1s ease;
-
-    &:hover {
-        filter: brightness(80%);
-    }
-
-    &.white {
-        background-color: white;
-        color: black;
-        &:hover {
-            filter: brightness(80%);
-        }
-    }
-
-}
+//#endregion
+//#region Square button
 
 .square-button {
     padding: 6px 66px 6px 14px;
@@ -116,26 +69,32 @@ button {
     border-radius: 6px;
 }
 
+//#endregion
+//#region Round button
+
 .round-button {
     padding: 6px 22px 6px 22px;
     border-radius: 40px;
     height: 54px;
     width: fit-content;
     transition: filter 0.1s ease;
-
+    
     &.bg-white {
         color: var(--theme-color);
     }
-
+    
     &.bg-black {
         color: white;
     }
-
+    
     &:hover {
         filter: brightness(80%);
     }
-
+    
 }
+
+//#endregion
+//#region Category button
 
 .category-button {
     background-color: #cccccc;
@@ -145,7 +104,7 @@ button {
     transition: all 0.15s;
     cursor: pointer;
     overflow: hidden;
-
+    
     p {
         margin-bottom: 0;
     }
@@ -190,14 +149,11 @@ button {
 
 }
 
-.center {
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-}
+//#endregion
+//#region Product button
 
 button.product {
-
+    
     position: relative;
     background-size: cover;
     background-position: center;
@@ -205,11 +161,11 @@ button.product {
     height: 400px;
     background-color: #eeeeee;
     border-radius: 4px;
-
+    
     &:hover {
         filter: none;
     }
-
+    
     .container {
         position: absolute;
         background-color: #292f51;
@@ -247,11 +203,11 @@ button.product {
         width: 100%;
         opacity: 0;
         transition: all 0.1s ease;
-
+        
         &:hover {
             opacity: 1;
         }
-
+        
     }
 
     .popup {
@@ -263,15 +219,15 @@ button.product {
         width: 46px;
         opacity: 1;
         padding: 23px 13px;
-
+        
         a {
             margin-top: 15px;
             &:hover {
                 color: var(--theme-color);
             }
-
+            
         }
-
+        
         a:nth-child(1) {
             margin-top: 0;
             color: #FE6C6C;
@@ -279,13 +235,13 @@ button.product {
                 color: var(--theme-color);
             }
         }
-
+        
     }
-
+    
     &:hover .container {
         
         height: 100%;
-
+        
         p {
             opacity: 100%;
         }
@@ -298,6 +254,59 @@ button.product {
             opacity: 100%;
         }
         
+    }
+    
+}
+//#endregion
+
+button {
+    
+    background-color: var(--theme-color);
+    color: white;
+    transition: background-color 0.1s;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: filter 0.1s ease;
+    
+    &:hover {
+        filter: brightness(80%);
+    }
+    
+    &.white {
+        background-color: white;
+        color: black;
+        &:hover {
+            filter: brightness(80%);
+        }
+    }
+    
+}
+
+a {
+    
+    color: black;
+    text-decoration: none;
+    align-self: center;
+    
+    &:hover {
+        color: black;
+        font-weight: bold;
+    }
+    
+    span {
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+}
+
+a.white {
+    
+    color: white;
+    
+    &:hover {
+        color: black;
     }
     
 }

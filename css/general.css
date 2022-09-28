@@ -11,16 +11,6 @@
   --theme-layout-margin: calc(100vw / 6);
 }
 
-iframe {
-  width: 100%;
-  height: 200px;
-  margin-bottom: -7px;
-}
-
-img, section {
-  overflow: clip;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -32,156 +22,12 @@ h1 {
   font-family: "Play", sans-serif;
 }
 
-.horizontal-align {
-  text-align: center;
-}
-
-.theme-background {
-  background-color: var(--theme-color);
-}
-
-.theme-color {
-  color: var(--theme-color);
-}
-
-.theme-layout-margin {
-  margin-left: 16.6666666667%;
-  margin-right: 16.6666666667%;
-  transition-property: margin-left, margin-right;
-  transition-duration: 1s;
-}
-@media only screen and (max-width: 1072px) {
-  .theme-layout-margin {
-    margin-left: 22px;
-    margin-right: 22px;
-    transition-property: margin-left, margin-right;
-    transition-duration: 1s;
-  }
-}
-
-.gray {
-  background: var(--light-gray);
-}
-
-.dark-gray {
-  background: var(--dark-gray);
-}
-
-.dark-blue {
-  background-color: var(--dark-blue);
-}
-
-.align-center {
-  align-content: center;
-  align-self: center;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.align-end {
-  align-self: flex-end;
-  right: 0px;
-}
-
-.align-start {
-  align-self: flex-start;
-  left: 0px;
-}
-
-.justify-content {
-  justify-content: space-around;
-}
-
-two-column-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-three-column-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-@media only screen and (max-width: 1450px) {
-  three-column-grid:not(.disable-small-viewport) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
-@media only screen and (max-width: 810px) {
-  three-column-grid:not(.disable-small-viewport) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-}
-
-@media only screen and (max-width: 1450px) {
-  .small-viewport-hide {
-    display: none;
-  }
-}
-grid {
-  display: grid;
-  gap: 30px;
-}
-
-.column0 {
-  grid-column-start: 1;
-}
-
-.column1 {
-  grid-column-start: 2;
-}
-
-.margin-right {
-  margin-right: 6px;
-}
-
-.margin-right-2x {
-  margin-right: 22px !important;
-}
-
-.margin {
-  margin-top: 22px;
-  margin-bottom: 22px;
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.bottom {
-  position: absolute;
-  bottom: 0;
-}
-
-.horizontal {
-  display: flex;
-  flex-direction: row;
-}
-
-.vertical {
-  display: flex;
-  flex-direction: column;
+label {
+  font-style: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 input {
@@ -207,6 +53,97 @@ input[type=checkbox] {
 
 footer {
   z-index: 10;
+}
+
+.background-theme {
+  background-color: var(--theme-color);
+}
+
+.color-theme {
+  color: var(--theme-color);
+}
+
+.color-black {
+  color: black;
+}
+
+.color-gray {
+  color: var(--light-gray2);
+}
+
+.color-white {
+  color: white;
+}
+
+.color-gray {
+  background: var(--light-gray);
+}
+
+.color-dark-gray {
+  background: var(--dark-gray);
+}
+
+.color-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+grid {
+  display: grid;
+  gap: 30px;
+}
+
+two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.theme-layout-margin {
+  margin-left: 16.6666666667%;
+  margin-right: 16.6666666667%;
+  transition-property: margin-left, margin-right;
+  transition-duration: 1s;
+}
+
+.section-header-margin {
+  margin-top: 162px;
+}
+
+.margin-right-6 {
+  margin-right: 6px;
+}
+
+.margin-right-22 {
+  margin-right: 22px !important;
+}
+
+.margin-top-22 {
+  margin-top: 22px;
+}
+
+.margin-bottom-22 {
+  margin-bottom: 22px;
+}
+
+.margin-top-bottom-22 {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
 }
 
 *[data-tooltip] {
@@ -235,8 +172,130 @@ footer {
   opacity: 1;
 }
 
+.line-height-min {
+  line-height: 60px;
+}
+
+.min-height-418 {
+  min-height: 418px !important;
+}
+
+.min-height-435 {
+  min-height: 435px !important;
+}
+
+.min-height-313 {
+  min-height: 313px !important;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-36 {
+  font-size: 36px !important;
+}
+
+.font-size-60 {
+  font-size: 60px !important;
+}
+
+.align-center {
+  align-content: center;
+  align-self: center;
+}
+
+.horizontal-align {
+  text-align: center;
+}
+
+.align-start {
+  align-self: flex-start;
+  left: 0px;
+}
+
+.align-end {
+  align-self: flex-end;
+  right: 0px;
+}
+
+.justify-content {
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1450px) {
+  :not(.disable-small-viewport) .small-viewport-hide {
+    display: none;
+  }
+  :not(.disable-small-viewport) three-column-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 1072px) {
+  :not(.disable-small-viewport) .theme-layout-margin {
+    margin-left: 22px;
+    margin-right: 22px;
+    transition-property: margin-left, margin-right;
+    transition-duration: 1s;
+  }
+}
+@media only screen and (max-width: 810px) {
+  :not(.disable-small-viewport) three-column-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.center {
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.display-inline {
+  display: inline !important;
+}
+
+.stretch-height {
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+}
+
+.stretch-width {
+  width: 100%;
+  left: 0px;
+  right: 0px;
+}
+
+.width-fit-content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .stretch-height {
   top: 0;
+  bottom: 0;
+}
+
+.bottom {
+  position: absolute;
   bottom: 0;
 }
 
@@ -246,4 +305,14 @@ footer {
 
 .position-absolute {
   position: absolute;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=general.css.map */

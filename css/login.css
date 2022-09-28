@@ -1,17 +1,4 @@
 @import url(general.css);
-footer {
-  color: white;
-}
-
-p {
-  margin-bottom: 0;
-}
-
-.form-error {
-  margin-bottom: 12px;
-  color: red;
-}
-
 .breadcrumb {
   color: white !important;
   background-color: #50546e;
@@ -33,10 +20,6 @@ p {
   margin-right: 8px;
 }
 
-.section-container {
-  gap: 30px;
-}
-
 .section {
   background-color: var(--white);
   min-height: 200px;
@@ -47,18 +30,27 @@ p {
   margin-bottom: 130px;
 }
 
+.section-container {
+  gap: 30px;
+}
+
+footer {
+  color: white;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.form-error {
+  margin-bottom: 12px;
+  color: red;
+}
+
 [type=text], [type=password] {
   height: 42px;
   border-radius: 4px;
   padding-left: 12px;
-}
-
-.font-size-14 {
-  font-size: 14px;
-}
-
-.color-gray {
-  color: var(--light-gray2);
 }
 
 .required::after {
@@ -73,25 +65,13 @@ h1 {
   font-style: normal;
 }
 
-label {
-  font-style: normal;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-input {
+.section input {
   margin-top: 4px;
   margin-bottom: 26px;
 }
 
 .round-button {
   width: 100%;
-}
-
-.display-inline {
-  display: inline !important;
 }
 
 h6 {
@@ -146,12 +126,4 @@ button.sso i {
   left: 8px;
   top: 8px;
   bottom: 8px;
-}
-
-.margin-top {
-  margin-top: 22px;
-}
-
-.margin-bottom {
-  margin-bottom: 22px;
 }/*# sourceMappingURL=login.css.map */

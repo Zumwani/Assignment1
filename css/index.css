@@ -17,7 +17,8 @@ button.info-box {
   text-align: left;
   white-space: normal;
   position: relative;
-  transition: background-color 0.25s ease;
+  scale: 100%;
+  transition: all 0.25s ease;
 }
 button.info-box div {
   width: 100%;
@@ -40,6 +41,9 @@ button.info-box:hover {
 }
 button.info-box:hover h5 {
   color: inherit;
+}
+button.info-box:active {
+  scale: 105%;
 }
 
 .squigly-line {

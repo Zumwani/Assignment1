@@ -19,11 +19,11 @@
 .dropdown a.icon::after {
   right: 12px;
 }
-.dropdown .square-button.icon::after {
-  top: 100px;
+.dropdown:hover, .dropdown button:hover {
+  filter: none !important;
 }
-.dropdown:hover {
-  filter: none;
+.dropdown:active, .dropdown button:active {
+  filter: none !important;
 }
 
 .dropdown-menu {
@@ -37,6 +37,11 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 22px;
+  min-height: 22px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -58,7 +63,7 @@
   margin-left: 6px;
 }
 
-.dropdown:hover .dropdown-menu, .dropdown-menu:hover {
+.dropdown:hover .dropdown-menu {
   display: block !important;
 }
 
@@ -86,6 +91,10 @@
 .round-button.bg-black {
   color: white;
 }
+.round-button.bg-black:hover {
+  background-color: white !important;
+  color: black;
+}
 
 .category-button {
   background-color: #cccccc;
@@ -95,6 +104,8 @@
   transition: all 0.15s;
   cursor: pointer;
   overflow: hidden;
+  scale: 100%;
+  transition: scale 0.1s ease;
 }
 .category-button p {
   margin-top: 0;
@@ -121,7 +132,7 @@
   opacity: 0;
 }
 .category-button:hover {
-  margin: 0px;
+  scale: 102.5%;
 }
 .category-button:hover div {
   height: 56px;
@@ -130,6 +141,9 @@
   visibility: visible;
   position: relative;
   opacity: 1;
+}
+.category-button:active {
+  scale: 105%;
 }
 
 button.product {
@@ -140,9 +154,14 @@ button.product {
   height: 400px;
   background-color: #eeeeee;
   border-radius: 4px;
+  scale: 100%;
+  transition: scale 0.1s ease;
 }
 button.product:hover {
   filter: none;
+}
+button.product:active {
+  scale: 102.5%;
 }
 button.product .container {
   position: absolute;
@@ -170,6 +189,29 @@ button.product .container .header {
   bottom: 4px;
   margin-bottom: 0;
   transition: all 0.1s;
+}
+button.product .container .rating {
+  margin: 12px;
+  margin-bottom: 6px;
+  font-size: 20px;
+  color: var(--theme-color);
+  font-family: "Font Awesome 6 Pro";
+  font-weight: normal;
+}
+button.product .container .rating.star-1 :nth-child(1) {
+  font-weight: bold;
+}
+button.product .container .rating.star-2 :nth-child(1), button.product .container .rating.star-2 :nth-child(2) {
+  font-weight: bold;
+}
+button.product .container .rating.star-3 :nth-child(1), button.product .container .rating.star-3 :nth-child(2), button.product .container .rating.star-3 :nth-child(3) {
+  font-weight: bold;
+}
+button.product .container .rating.star-4 :nth-child(1), button.product .container .rating.star-4 :nth-child(2), button.product .container .rating.star-4 :nth-child(3), button.product .container .rating.star-4 :nth-child(4) {
+  font-weight: bold;
+}
+button.product .container .rating.star-5 :nth-child(1), button.product .container .rating.star-5 :nth-child(2), button.product .container .rating.star-5 :nth-child(3), button.product .container .rating.star-5 :nth-child(4), button.product .container .rating.star-5 :nth-child(5) {
+  font-weight: bold;
 }
 button.product .popup-container {
   position: relative;
@@ -227,13 +269,13 @@ button {
   transition: filter 0.1s ease;
 }
 button:hover {
-  filter: brightness(80%);
+  filter: brightness(90%);
 }
 button.white {
   background-color: white;
   color: black;
 }
-button.white:hover {
+button:active {
   filter: brightness(80%);
 }
 
@@ -247,8 +289,13 @@ a {
 }
 a:hover {
   text-shadow: 1px 1px 1px black;
-  font-weight: bold;
   color: black;
+}
+a:hover.fill::before {
+  font-weight: bold;
+}
+a:active {
+  text-shadow: 1px 1px 4px black;
 }
 a span {
   font-size: 16px;

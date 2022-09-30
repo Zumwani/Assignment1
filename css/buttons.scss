@@ -18,19 +18,18 @@
         font-size: 22px;
         text-align: right;
         position: absolute;
-        
     }
     
     a.icon::after {
         right: 12px;
     }
-    
-    .square-button.icon::after {
-        top: 100px;
+
+    &:hover, button:hover {
+        filter: none !important;
     }
-    
-    &:hover {
-        filter: none;
+
+    &:active, button:active {
+        filter: none !important;
     }
 
 }
@@ -45,6 +44,9 @@
     display: none !important;
     background-color: var(--white);
     width: fit-content;
+    height: fit-content;
+    min-width: 22px;
+    min-height: 22px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 
@@ -70,8 +72,8 @@
 
 }
 
-.dropdown:hover .dropdown-menu, .dropdown-menu:hover {
-    display: block !important; 
+.dropdown:hover .dropdown-menu {
+    display: block !important;
 }
 
 //#endregion
@@ -102,6 +104,12 @@
     
     &.bg-black {
         color: white;
+
+        &:hover {
+            background-color: white !important;
+            color: black;
+        }
+
     }
     
 }
@@ -147,7 +155,7 @@
     }
     
     &:hover {
-        margin: 0px;
+        scale: 102.5%;
 
         div {
             height: 56px;
@@ -159,6 +167,12 @@
             opacity: 1;
         }
 
+    }
+
+    scale: 100%;
+    transition: scale 0.1s ease;
+    &:active {
+        scale: 105%;
     }
 
 }
@@ -175,11 +189,16 @@ button.product {
     height: 400px;
     background-color: #eeeeee;
     border-radius: 4px;
+    scale: 100%;
+    transition: scale 0.1s ease;
     
     &:hover {
         filter: none;
     }
-    
+    &:active {
+        scale: 102.5%;
+    }
+
     .container {
         position: absolute;
         background-color: #292f51;
@@ -208,7 +227,42 @@ button.product {
             margin-bottom: 0;
             transition: all 0.1s;
         }
-        
+
+        .rating {
+            margin: 12px;
+            margin-bottom: 6px;
+            font-size: 20px;
+            color: var(--theme-color);
+            font-family: "Font Awesome 6 Pro";
+            font-weight: normal;
+
+            &.star-1 {
+                :nth-child(1)
+                { font-weight: bold; }
+            }
+
+            &.star-2 {
+                :nth-child(1),:nth-child(2)
+                { font-weight: bold; }
+            }
+
+            &.star-3 {
+                :nth-child(1),:nth-child(2),:nth-child(3)
+                { font-weight: bold; }
+            }
+
+            &.star-4 {
+                :nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4)
+                { font-weight: bold; }
+            }
+
+            &.star-5 {
+                :nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5) 
+                { font-weight: bold; }
+            }
+            
+        }
+
     }
     
     .popup-container {
@@ -284,15 +338,16 @@ button {
     transition: filter 0.1s ease;
     
     &:hover {
-        filter: brightness(80%);
+        filter: brightness(90%);
     }
     
     &.white {
         background-color: white;
         color: black;
-        &:hover {
-            filter: brightness(80%);
-        }
+    }
+    
+    &:active {
+        filter: brightness(80%);
     }
     
 }
@@ -308,8 +363,16 @@ a {
 
     &:hover {
         text-shadow: 1px 1px 1px black;
-        font-weight: bold;
         color: black;
+        
+        &.fill::before {
+            font-weight: bold;
+        }
+
+    }
+    
+    &:active {
+        text-shadow: 1px 1px 4px black;
     }
     
     span {

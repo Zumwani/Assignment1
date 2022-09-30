@@ -15,93 +15,96 @@
 </head>
 <body>
 
-    <!--Header, loaded by header.js-->
-    <div id="header"></div>
+    <div class="page-content">
 
-    <!--Breadcrumb-->
-    <div class="breadcrumb flex">
-        
-        <div class="theme-layout-margin flex position-relative width-stretch">
-            <a href="" class="color-theme">My Account</a>
-            <div class="align-end position-absolute flex">
-                <a href="" class="color-theme">Home</a>
-                <p>/</p>
-                <a href="" class="white">My Account</a>
+        <!--Header, loaded by header.js-->
+        <div id="header"></div>
+    
+        <!--Breadcrumb-->
+        <div class="breadcrumb flex">
+            
+            <div class="theme-layout-margin flex position-relative width-stretch">
+                <a href="" class="color-theme">My Account</a>
+                <div class="align-end position-absolute flex">
+                    <a href="index.html" class="color-theme">Home</a>
+                    <p>/</p>
+                    <a href="" class="white">My Account</a>
+                </div>
             </div>
+            
         </div>
         
-    </div>
-    
-    <two-column-grid class="theme-layout-margin section-container position-relative">
-        
-        <!--Login-->
-        <div class="section align-self-start">
+        <two-column-grid class="theme-layout-margin section-container position-relative">
             
-            <form method="post" class="flex-column">
+            <!--Login-->
+            <div class="section align-self-start">
                 
-                <h1>LOGIN</h1>
-                <label for="email" class="required">Email address</label>
-                <input id="email" type="text" required pattern=".*@.*\..{1,}" placeholder="example@domain.com"></input>
-                
-                <label for="password" class="required">Password</label>
-                <input id="password" type="password" required></input>
-                
-                <button type="submit" onsubmit="login" class="round-button margin-bottom-22">LOG IN</button>
-                <p class="form-error login"></p>
-
-                <div class="position-relative">
-                    <input id="remember" type="checkbox"></input>
-                    <label for="remember" class="remember-label">Remember me</label>
-                    <div class="flex display-inline position-absolute align-end">
-                        <a href="" class="align-right color-theme">Lost your password?</a>
+                <form method="post" class="flex-column">
+                    
+                    <h1>LOGIN</h1>
+                    <label for="email" class="required">Email address</label>
+                    <input id="email" type="text" required pattern=".*@.*\..{1,}" placeholder="example@domain.com"></input>
+                    
+                    <label for="password" class="required">Password</label>
+                    <input id="password" type="password" required></input>
+                    
+                    <button type="submit" onsubmit="login" class="round-button margin-bottom-22">LOG IN</button>
+                    <p class="form-error login"></p>
+    
+                    <div class="position-relative">
+                        <input id="remember" type="checkbox"></input>
+                        <label for="remember" class="remember-label">Remember me</label>
+                        <div class="flex display-inline position-absolute align-end">
+                            <a href="" class="align-right color-theme">Lost your password?</a>
+                        </div>
+                    </div>
+                    
+                </form>
+    
+                <div class="position-relative login-sso-header">
+                    <div class="flex justify-content-center">
+                        <div class="line"></div>
+                        <h6>OR LOGIN WITH</h6>
                     </div>
                 </div>
-                
-            </form>
-
-            <div class="position-relative login-sso-header">
-                <div class="flex justify-content-center">
-                    <div class="line"></div>
-                    <h6>OR LOGIN WITH</h6>
+    
+                <div class="flex gap-2 margin-top-22">
+                    <button onsubmit="sso_facebook" class="sso facebook"><i class="fa fa-facebook"></i>Facebook</button>
+                    <button onsubmit="sso_google"class="sso google"><i class="fa fa-google"></i>Google</button>
                 </div>
+    
             </div>
-
-            <div class="flex gap-2 margin-top-22">
-                <button onsubmit="sso_facebook" class="sso facebook"><i class="fa fa-facebook"></i>Facebook</button>
-                <button onsubmit="sso_google"class="sso google"><i class="fa fa-google"></i>Google</button>
-            </div>
-
-        </div>
-        
-        <!--Register-->
-        <div class="section">
-            <form class="flex-column">
             
-                <h1>REGISTER</h1>
-                <p class="font-size-14 color-gray margin-top-22">Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
-
-                <label for="firstname" class="required margin-top-22">Firstname</label>
-                <input id="firstname" type="text" required></input>
-
-                <label for="lastname" class="required">Lastname</label>
-                <input id="lastname" type="text" required></input>
-
-                <label for="email2" class="required">Email address</label>
-                <input id="email2" type="text" required pattern=".*@.*\..{1,}" placeholder="example@domain.com"></input>
-
-                <label for="password2" class="required">Password</label>
-                <input id="password2" type="password" required></input>
-
-                <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="" class="color-theme">privacy policy</a>.</p>
-
-                <button onsubmit="register" class="round-button margin-top-22">REGISTER</button>
-                <p class="form-error register"></p>
+            <!--Register-->
+            <div class="section">
+                <form class="flex-column">
                 
-            </form>
-        </div>
-            
-    </two-column-grid>
-        
+                    <h1>REGISTER</h1>
+                    <p class="font-size-14 color-gray margin-top-22">Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+    
+                    <label for="firstname" class="required margin-top-22">Firstname</label>
+                    <input id="firstname" type="text" required></input>
+    
+                    <label for="lastname" class="required">Lastname</label>
+                    <input id="lastname" type="text" required></input>
+    
+                    <label for="email2" class="required">Email address</label>
+                    <input id="email2" type="text" required pattern=".*@.*\..{1,}" placeholder="example@domain.com"></input>
+    
+                    <label for="password2" class="required">Password</label>
+                    <input id="password2" type="password" required></input>
+    
+                    <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="" class="color-theme">privacy policy</a>.</p>
+    
+                    <button onsubmit="register" class="round-button margin-top-22">REGISTER</button>
+                    <p class="form-error register"></p>
+                    
+                </form>
+            </div>
+                
+        </two-column-grid>
+    </div>
+
     <!--Footer-->
     <footer class="flex color-dark-blue">
         <p class="theme-layout-margin margin-top-bottom-22 color-white">© Copyright 2022 Kenkata</p>

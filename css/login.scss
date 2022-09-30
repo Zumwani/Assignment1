@@ -59,8 +59,23 @@
     gap: 30px;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    bottom: 68px;
+}
+
 footer {
-    color: white;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 68px;
+    width: 100%;
+    overflow: hidden;
 }
 
 p {

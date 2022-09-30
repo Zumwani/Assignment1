@@ -20,7 +20,8 @@ button.info-box {
     text-align: left;
     white-space: normal;
     position: relative;
-    transition: background-color 0.25s ease;
+    scale: 100%;
+    transition: all 0.25s ease;
 
     div {
         width: 100%;
@@ -46,6 +47,10 @@ button.info-box {
         h5 {
             color: inherit;
         }
+    }
+
+    &:active {
+        scale: 105%;
     }
 
 }

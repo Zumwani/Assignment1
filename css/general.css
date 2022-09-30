@@ -12,9 +12,10 @@
   --theme-layout-margin: calc(100vw / 6);
 }
 
-body {
+body, html {
   font-family: "Roboto", sans-serif;
   width: 100%;
+  min-width: 700px;
   margin: 0;
   overflow-x: clip;
 }
@@ -207,7 +208,7 @@ three-column-grid {
   font-size: 60px !important;
 }
 
-@media only screen and (min-width: 1065px) {
+@media only screen and (min-width: 1116px) {
   .large-viewport-hide {
     display: none;
   }
@@ -228,7 +229,7 @@ three-column-grid {
     transition-duration: 1s;
   }
 }
-@media only screen and (max-width: 1064px) {
+@media only screen and (max-width: 1115px) {
   :not(.disable-small-viewport) .extra-small-viewport-hide {
     display: none;
   }

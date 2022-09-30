@@ -15,9 +15,10 @@
 
 //#region Default styles
 
-body {
+body, html {
     font-family: 'Roboto', sans-serif;
     width: 100%;
+    min-width: 700px;
     margin: 0;
     overflow-x: clip;
 }
@@ -232,7 +233,7 @@ three-column-grid {
 //#region Small viewport
 
 .large-viewport-hide {
-    @media only screen and (min-width: 1065px) {
+    @media only screen and (min-width: 1116px) {
         display: none;
     }
 }
@@ -259,7 +260,7 @@ three-column-grid {
         
     }
 
-    @media only screen and (max-width: 1064px) {
+    @media only screen and (max-width: 1115px) {
         
         .extra-small-viewport-hide {
             display: none;

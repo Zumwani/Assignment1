@@ -1,4 +1,4 @@
 # Assignment1
 HTML + CSS + SASS.
 
-https://zumwani.github.io/Assignment1/
+https://andreas-ingeholm-ec-utbildning.github.io/Assignment1/
